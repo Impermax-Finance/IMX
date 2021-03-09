@@ -1,0 +1,1443 @@
+{
+  "contractName": "VesterSaleHarness",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "imx_",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient_",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "vestingAmount_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "vestingBegin_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "vestingEnd_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "claim",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "finalPoint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "imx",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "previousPoint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "recipient",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "segments",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient_",
+          "type": "address"
+        }
+      ],
+      "name": "setRecipient",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "vestingAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "vestingBegin",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "x",
+          "type": "uint256"
+        }
+      ],
+      "name": "vestingCurve",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "y",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "vestingEnd",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getBlockTimestamp",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "blockTimestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "setBlockTimestamp",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"imx_\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient_\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"vestingAmount_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vestingBegin_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vestingEnd_\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"claim\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"finalPoint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBlockTimestamp\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"imx\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"previousPoint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"recipient\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"segments\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"blockTimestamp\",\"type\":\"uint256\"}],\"name\":\"setBlockTimestamp\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient_\",\"type\":\"address\"}],\"name\":\"setRecipient\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vestingAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vestingBegin\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"vestingCurve\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"y\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vestingEnd\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/simor/Desktop/imx/contracts/test/VesterSaleHarness.sol\":\"VesterSaleHarness\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"/C/Users/simor/Desktop/imx/contracts/VesterSale.sol\":{\"keccak256\":\"0xbb2ea8d1be51ad3f4781b10ec2f08b5a96c53e0a9fec0821825d30a1f683fbef\",\"urls\":[\"bzz-raw://6a392a8d53e71dfd414c49671bccfaa2ea6e4f6e1408a86b75615da0f3078b5c\",\"dweb:/ipfs/QmW4dYxWrKNbmmZeb1S59cu4HEJPFTLRBQ8zYeHB6anXcX\"]},\"/C/Users/simor/Desktop/imx/contracts/interfaces/IClaimable.sol\":{\"keccak256\":\"0x9f13ef1b8b3fd89f51bfda83861e68b279d1da2f8336c023dddcdebf0a5de91b\",\"urls\":[\"bzz-raw://19ab2a85b886328c482d70004b079e5b93ec98c6373e4a3ded749002ed89c8e1\",\"dweb:/ipfs/QmfHBn2iJCyNs8PbjCoCh7GoJocTVxjeEfL2szXsM2vA7F\"]},\"/C/Users/simor/Desktop/imx/contracts/interfaces/IImx.sol\":{\"keccak256\":\"0xc3bebefc66d4b25346721d8bde24792cf665ef3817757bcb13fcc7e3f91c50e0\",\"urls\":[\"bzz-raw://a174d6135744c0a08d33a47b9b6e1871de414cbe1aa23ad85658569615e77a52\",\"dweb:/ipfs/QmPuLMfKfEByF9Fycc7P6AL3frDHbA4dBQtyCTqcF4dxpQ\"]},\"/C/Users/simor/Desktop/imx/contracts/interfaces/IVester.sol\":{\"keccak256\":\"0x2a90b7d34b53920b06fa0309a8dd7f5db1703d3f9b5dadbfe73e02ce67adb328\",\"urls\":[\"bzz-raw://60d2092922891fbf272cbfe3a8ebbc97df0d6a0cbc795a1465eb49beabe0f874\",\"dweb:/ipfs/QmepQaNkmaHzAji3C7aL248kcLpf8ByxwAQrzyUoPKsPWx\"]},\"/C/Users/simor/Desktop/imx/contracts/libraries/SafeMath.sol\":{\"keccak256\":\"0x6600fcb47f1df50e408a95ad498c686019a4afe3742f29addaab6db913ab6762\",\"urls\":[\"bzz-raw://65c432748397aae2c903b6f183947051ac2ff4d3bb6fe024097bb534c7428750\",\"dweb:/ipfs/QmUczJBH2Y31xcPNQZQ6ZfdqBn6bSnUTJ92rBbdTZKEdpd\"]},\"/C/Users/simor/Desktop/imx/contracts/test/VesterSaleHarness.sol\":{\"keccak256\":\"0xa74dbc6c95183e3827ee1ef930189c9256f68cc9da213c949a7e0366395c7934\",\"urls\":[\"bzz-raw://a532e8086a294aaf4f0458814b2dd565279114b83c0b47408bafbb52b4a18f07\",\"dweb:/ipfs/QmPh6s9uqihcmWK4yrCfft3fAooMp3p1Dyyx9PPkXaN4se\"]}},\"version\":1}",
+  "bytecode": "0x61012060405234801561001157600080fd5b50604051610c18380380610c18833981810160405260a081101561003457600080fd5b5080516020820151604083015160608401516080909401519293919290919084848484848181116100ac576040805162461bcd60e51b815260206004820152601560248201527f5665737465723a20454e445f544f4f5f4541524c590000000000000000000000604482015290519081900360640190fd5b606085901b6001600160601b031916608052600080546001600160a01b0319166001600160a01b03861617815560a084905260c083905260e08290526001556100fc670de0b6b3a7640000610110565b610100525061017998505050505050505050565b6000670de0b6b3a7640000815b670de0b6b3a76400008110156101715780662386f26fc100000184101561015457662386f26fc10000908403919091020401610174565b918101916103e86103d08302049150662386f26fc100000161011d565b50505b919050565b60805160601c60a05160c05160e05161010051610a2b6101ed60003980610203528061056c5250806103dd52806104ed52806107275250806103ab52806104cc528061051b52806107bf5250806101df528061059552806105ed525080610227528061044952806106865250610a2b6000f3fe608060405234801561001057600080fd5b50600436106100de5760003560e01c8063796b89b91161008c578063cf19036011610066578063cf190360146101a8578063e0abdf66146101b0578063e29bc68b146101cd578063e2d6870a146101d5576100de565b8063796b89b91461017b57806384a1931f1461018357806389b1e13f1461018b576100de565b80633bbed4a0116100bd5780633bbed4a0146101365780634e71d92d1461016b57806366d003ac14610173576100de565b8062728f76146100e3578063062f0429146100fd5780630f08025f14610105575b600080fd5b6100eb6101dd565b60408051918252519081900360200190f35b6100eb610201565b61010d610225565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b6101696004803603602081101561014c57600080fd5b503573ffffffffffffffffffffffffffffffffffffffff16610249565b005b6100eb610316565b61010d610703565b6100eb61071f565b6100eb610725565b6100eb600480360360208110156101a157600080fd5b5035610749565b6100eb6107b2565b610169600480360360208110156101c657600080fd5b50356107b8565b6100eb6107bd565b6100eb6107e1565b7f000000000000000000000000000000000000000000000000000000000000000081565b7f000000000000000000000000000000000000000000000000000000000000000081565b7f000000000000000000000000000000000000000000000000000000000000000081565b60005473ffffffffffffffffffffffffffffffffffffffff1633146102cf57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601460248201527f5665737465723a20554e415554484f52495a4544000000000000000000000000604482015290519081900360640190fd5b600080547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff92909216919091179055565b6000805473ffffffffffffffffffffffffffffffffffffffff16331461039d57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601460248201527f5665737465723a20554e415554484f52495a4544000000000000000000000000604482015290519081900360640190fd5b60006103a761071f565b90507f00000000000000000000000000000000000000000000000000000000000000008110156103db576000915050610700565b7f00000000000000000000000000000000000000000000000000000000000000008111156104c257604080517f70a08231000000000000000000000000000000000000000000000000000000008152306004820152905173ffffffffffffffffffffffffffffffffffffffff7f000000000000000000000000000000000000000000000000000000000000000016916370a08231916024808301926020929190829003018186803b15801561048f57600080fd5b505afa1580156104a3573d6000803e3d6000fd5b505050506040513d60208110156104b957600080fd5b5051915061062d565b600061055b6105567f00000000000000000000000000000000000000000000000000000000000000007f00000000000000000000000000000000000000000000000000000000000000000361054a670de0b6b3a76400007f000000000000000000000000000000000000000000000000000000000000000087036107e690919063ffffffff16565b9063ffffffff61086216565b610749565b90506105ce600a61054a60086105c27f000000000000000000000000000000000000000000000000000000000000000061054a60015488037f00000000000000000000000000000000000000000000000000000000000000006107e690919063ffffffff16565b9063ffffffff6107e616565b925060015460001480156105e0575080155b15610629576106266106197f0000000000000000000000000000000000000000000000000000000000000000600563ffffffff61086216565b849063ffffffff6108a416565b92505b6001555b81156106fe5760008054604080517fa9059cbb00000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff92831660048201526024810186905290517f00000000000000000000000000000000000000000000000000000000000000009092169263a9059cbb926044808401936020939083900390910190829087803b1580156106d157600080fd5b505af11580156106e5573d6000803e3d6000fd5b505050506040513d60208110156106fb57600080fd5b50505b505b90565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b60025490565b7f000000000000000000000000000000000000000000000000000000000000000081565b6000670de0b6b3a7640000815b670de0b6b3a76400008110156107aa5780662386f26fc100000184101561078d57662386f26fc100009084039190910204016107ad565b918101916103e86103d08302049150662386f26fc1000001610756565b50505b919050565b60015481565b600255565b7f000000000000000000000000000000000000000000000000000000000000000081565b606481565b6000826107f55750600061085c565b8282028284828161080257fe5b0414610859576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806109d56021913960400191505060405180910390fd5b90505b92915050565b600061085983836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f000000000000815250610918565b60008282018381101561085957604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b600081836109be576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561098357818101518382015260200161096b565b50505050905090810190601f1680156109b05780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b5060008385816109ca57fe5b049594505050505056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77a2646970667358221220f3d3b3020e4741fe57103e6d15684f1ffe7ad116e4e357ec183ed5caa3bc34ea64736f6c63430006060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100de5760003560e01c8063796b89b91161008c578063cf19036011610066578063cf190360146101a8578063e0abdf66146101b0578063e29bc68b146101cd578063e2d6870a146101d5576100de565b8063796b89b91461017b57806384a1931f1461018357806389b1e13f1461018b576100de565b80633bbed4a0116100bd5780633bbed4a0146101365780634e71d92d1461016b57806366d003ac14610173576100de565b8062728f76146100e3578063062f0429146100fd5780630f08025f14610105575b600080fd5b6100eb6101dd565b60408051918252519081900360200190f35b6100eb610201565b61010d610225565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b6101696004803603602081101561014c57600080fd5b503573ffffffffffffffffffffffffffffffffffffffff16610249565b005b6100eb610316565b61010d610703565b6100eb61071f565b6100eb610725565b6100eb600480360360208110156101a157600080fd5b5035610749565b6100eb6107b2565b610169600480360360208110156101c657600080fd5b50356107b8565b6100eb6107bd565b6100eb6107e1565b7f000000000000000000000000000000000000000000000000000000000000000081565b7f000000000000000000000000000000000000000000000000000000000000000081565b7f000000000000000000000000000000000000000000000000000000000000000081565b60005473ffffffffffffffffffffffffffffffffffffffff1633146102cf57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601460248201527f5665737465723a20554e415554484f52495a4544000000000000000000000000604482015290519081900360640190fd5b600080547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff92909216919091179055565b6000805473ffffffffffffffffffffffffffffffffffffffff16331461039d57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601460248201527f5665737465723a20554e415554484f52495a4544000000000000000000000000604482015290519081900360640190fd5b60006103a761071f565b90507f00000000000000000000000000000000000000000000000000000000000000008110156103db576000915050610700565b7f00000000000000000000000000000000000000000000000000000000000000008111156104c257604080517f70a08231000000000000000000000000000000000000000000000000000000008152306004820152905173ffffffffffffffffffffffffffffffffffffffff7f000000000000000000000000000000000000000000000000000000000000000016916370a08231916024808301926020929190829003018186803b15801561048f57600080fd5b505afa1580156104a3573d6000803e3d6000fd5b505050506040513d60208110156104b957600080fd5b5051915061062d565b600061055b6105567f00000000000000000000000000000000000000000000000000000000000000007f00000000000000000000000000000000000000000000000000000000000000000361054a670de0b6b3a76400007f000000000000000000000000000000000000000000000000000000000000000087036107e690919063ffffffff16565b9063ffffffff61086216565b610749565b90506105ce600a61054a60086105c27f000000000000000000000000000000000000000000000000000000000000000061054a60015488037f00000000000000000000000000000000000000000000000000000000000000006107e690919063ffffffff16565b9063ffffffff6107e616565b925060015460001480156105e0575080155b15610629576106266106197f0000000000000000000000000000000000000000000000000000000000000000600563ffffffff61086216565b849063ffffffff6108a416565b92505b6001555b81156106fe5760008054604080517fa9059cbb00000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff92831660048201526024810186905290517f00000000000000000000000000000000000000000000000000000000000000009092169263a9059cbb926044808401936020939083900390910190829087803b1580156106d157600080fd5b505af11580156106e5573d6000803e3d6000fd5b505050506040513d60208110156106fb57600080fd5b50505b505b90565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b60025490565b7f000000000000000000000000000000000000000000000000000000000000000081565b6000670de0b6b3a7640000815b670de0b6b3a76400008110156107aa5780662386f26fc100000184101561078d57662386f26fc100009084039190910204016107ad565b918101916103e86103d08302049150662386f26fc1000001610756565b50505b919050565b60015481565b600255565b7f000000000000000000000000000000000000000000000000000000000000000081565b606481565b6000826107f55750600061085c565b8282028284828161080257fe5b0414610859576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806109d56021913960400191505060405180910390fd5b90505b92915050565b600061085983836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f000000000000815250610918565b60008282018381101561085957604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b600081836109be576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561098357818101518382015260200161096b565b50505050905090810190601f1680156109b05780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b5060008385816109ca57fe5b049594505050505056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77a2646970667358221220f3d3b3020e4741fe57103e6d15684f1ffe7ad116e4e357ec183ed5caa3bc34ea64736f6c63430006060033",
+  "immutableReferences": {
+    "1943": [
+      {
+        "length": 32,
+        "start": 551
+      },
+      {
+        "length": 32,
+        "start": 1097
+      },
+      {
+        "length": 32,
+        "start": 1670
+      }
+    ],
+    "1948": [
+      {
+        "length": 32,
+        "start": 479
+      },
+      {
+        "length": 32,
+        "start": 1429
+      },
+      {
+        "length": 32,
+        "start": 1517
+      }
+    ],
+    "1951": [
+      {
+        "length": 32,
+        "start": 939
+      },
+      {
+        "length": 32,
+        "start": 1228
+      },
+      {
+        "length": 32,
+        "start": 1307
+      },
+      {
+        "length": 32,
+        "start": 1983
+      }
+    ],
+    "1954": [
+      {
+        "length": 32,
+        "start": 989
+      },
+      {
+        "length": 32,
+        "start": 1261
+      },
+      {
+        "length": 32,
+        "start": 1831
+      }
+    ],
+    "1958": [
+      {
+        "length": 32,
+        "start": 515
+      },
+      {
+        "length": 32,
+        "start": 1388
+      }
+    ]
+  },
+  "sourceMap": "71:498:19:-:0;;;119:206;5:9:-1;2:2;;;27:1;24;17:12;2:2;119:206:19;;;;;;;;;;;;;;;15:3:-1;10;7:12;4:2;;;32:1;29;22:12;4:2;-1:-1;119:206:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1013:27:6;;;1005:61;;;;;-1:-1:-1;;;1005:61:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;1073:10;;;;-1:-1:-1;;;;;;1073:10:6;;;1088:9;:22;;-1:-1:-1;;;;;;1088:22:6;-1:-1:-1;;;;;1088:22:6;;;;;1117:30;;;;1152:28;;;;1185:24;;;;-1:-1:-1;1216:17:6;1251:18;1264:4;1251:12;:18::i;:::-;1238:31;;-1:-1:-1;71:498:19;;-1:-1:-1;;;;;;;;;71:498:19;615:249:6;674:6;700:4;674:6;709:151;730:6;726:1;:10;709:151;;;763:1;767:4;763:8;759:1;:12;755:51;;;802:4;793:5;;;784:15;;;;:22;780:26;773:33;;755:51;812:10;;;;850:4;844:3;836:11;;:18;;-1:-1:-1;743:4:6;738:9;709:151;;;;615:249;;;;;:::o;71:498:19:-;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "71:498:19:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;71:498:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;12:1:-1;9;2:12;405:44:6;;;:::i;:::-;;;;;;;;;;;;;;;;576:32;;;:::i;343:28::-;;;:::i;:::-;;;;;;;;;;;;;;;;;;;2017:150;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;2017:150:6;;;;:::i;:::-;;1280:731;;;:::i;375:24::-;;;:::i;358:105:19:-;;;:::i;500:41:6:-;;;:::i;615:249::-;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;615:249:6;;:::i;547:25::-;;;:::i;466:97:19:-;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;466:97:19;;:::i;453:43:6:-;;;:::i;293:44::-;;;:::i;405:::-;;;:::o;576:32::-;;;:::o;343:28::-;;;:::o;2017:150::-;2101:9;;;;2087:10;:23;2079:56;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2140:9;:22;;;;;;;;;;;;;;;2017:150::o;1280:731::-;1330:11;1370:9;;;;1356:10;:23;1348:56;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1409:19;1431;:17;:19::i;:::-;1409:41;;1476:12;1459:14;:29;1455:43;;;1497:1;1490:8;;;;;1455:43;1524:10;1507:14;:27;1503:446;;;1551:34;;;;;;1579:4;1551:34;;;;;;:19;1556:3;1551:19;;;;:34;;;;;;;;;;;;;;:19;:34;;;2:2:-1;;;;27:1;24;17:12;2:2;1551:34:6;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1551:34:6;;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;1551:34:6;;-1:-1:-1;1503:446:6;;;1603:17;1623:88;1637:72;1696:12;1683:10;:25;1637:41;1673:4;1655:12;1638:14;:29;1637:35;;:41;;;;:::i;:::-;:45;:72;:45;:72;:::i;:::-;1623:12;:88::i;:::-;1603:108;;1726:78;1801:2;1726:70;1794:1;1726:63;1778:10;1726:47;1759:13;;1744:12;:28;1726:13;:17;;:47;;;;:::i;:63::-;:67;:70;:67;:70;:::i;:78::-;1717:87;;1814:13;;1831:1;1814:18;:39;;;;-1:-1:-1;1836:17:6;;1814:39;1810:100;;;1871:32;1882:20;:13;1900:1;1882:20;:17;:20;:::i;:::-;1871:6;;:32;:10;:32;:::i;:::-;1862:41;;1810:100;1915:13;:28;1503:446;1957:10;;1953:53;;1988:9;;;1969:37;;;;;;:18;1988:9;;;1969:37;;;;;;;;;;;;1974:3;1969:18;;;;;;:37;;;;;;;;;;;;;;;;;:18;:37;;;2:2:-1;;;;27:1;24;17:12;2:2;1969:37:6;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1969:37:6;;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;;1953:53:6;1280:731;;;:::o;375:24::-;;;;;;:::o;358:105:19:-;443:15;;358:105;:::o;500:41:6:-;;;:::o;615:249::-;674:6;700:4;674:6;709:151;730:6;726:1;:10;709:151;;;763:1;767:4;763:8;759:1;:12;755:51;;;802:4;793:5;;;784:15;;;;:22;780:26;773:33;;755:51;812:10;;;;850:4;844:3;836:11;;:18;;-1:-1:-1;743:4:6;738:9;709:151;;;;615:249;;;;;:::o;547:25::-;;;;:::o;466:97:19:-;526:15;:32;466:97::o;453:43:6:-;;;:::o;293:44::-;334:3;293:44;:::o;2655:459:13:-;2713:7;2954:6;2950:45;;-1:-1:-1;2983:1:13;2976:8;;2950:45;3017:5;;;3021:1;3017;:5;:1;3040:5;;;;;:10;3032:56;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3106:1;-1:-1:-1;2655:459:13;;;;;:::o;4266:130::-;4324:7;4350:39;4354:1;4357;4350:39;;;;;;;;;;;;;;;;;:3;:39::i;958:176::-;1016:7;1047:5;;;1070:6;;;;1062:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4871:338;4957:7;5057:12;5050:5;5042:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;5042:28:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5080:9;5096:1;5092;:5;;;;;;;4871:338;-1:-1:-1;;;;;4871:338:13:o",
+  "source": "pragma solidity =0.6.6;\r\n\r\nimport \"../../contracts/VesterSale.sol\";\r\n\r\ncontract VesterSaleHarness is VesterSale {\r\n\t\r\n\tconstructor(\r\n\t\taddress imx_,\r\n\t\taddress recipient_,\r\n\t\tuint vestingAmount_,\r\n\t\tuint vestingBegin_,\r\n\t\tuint vestingEnd_\r\n\t) public VesterSale(imx_, recipient_, vestingAmount_, vestingBegin_, vestingEnd_) {}\r\n\t\r\n\t\r\n\tuint _blockTimestamp;\r\n\tfunction getBlockTimestamp() public virtual override view returns (uint) {\r\n\t\treturn _blockTimestamp;\r\n\t}\r\n\tfunction setBlockTimestamp(uint blockTimestamp) public {\r\n\t\t_blockTimestamp = blockTimestamp;\r\n\t}\r\n\t\r\n}",
+  "sourcePath": "C:/Users/simor/Desktop/imx/contracts/test/VesterSaleHarness.sol",
+  "ast": {
+    "absolutePath": "/C/Users/simor/Desktop/imx/contracts/test/VesterSaleHarness.sol",
+    "exportedSymbols": {
+      "VesterSaleHarness": [
+        3275
+      ]
+    },
+    "id": 3276,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3229,
+        "literals": [
+          "solidity",
+          "=",
+          "0.6",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:19"
+      },
+      {
+        "absolutePath": "/C/Users/simor/Desktop/imx/contracts/VesterSale.sol",
+        "file": "../../contracts/VesterSale.sol",
+        "id": 3230,
+        "nodeType": "ImportDirective",
+        "scope": 3276,
+        "sourceUnit": 2206,
+        "src": "27:40:19",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3231,
+              "name": "VesterSale",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2205,
+              "src": "101:10:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_VesterSale_$2205",
+                "typeString": "contract VesterSale"
+              }
+            },
+            "id": 3232,
+            "nodeType": "InheritanceSpecifier",
+            "src": "101:10:19"
+          }
+        ],
+        "contractDependencies": [
+          2205,
+          2470,
+          2512
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3275,
+        "linearizedBaseContracts": [
+          3275,
+          2205,
+          2470,
+          2512
+        ],
+        "name": "VesterSaleHarness",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 3252,
+              "nodeType": "Block",
+              "src": "323:2:19",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 3253,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 3245,
+                    "name": "imx_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3234,
+                    "src": "261:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 3246,
+                    "name": "recipient_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3236,
+                    "src": "267:10:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 3247,
+                    "name": "vestingAmount_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3238,
+                    "src": "279:14:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 3248,
+                    "name": "vestingBegin_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3240,
+                    "src": "295:13:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 3249,
+                    "name": "vestingEnd_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3242,
+                    "src": "310:11:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 3250,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 3244,
+                  "name": "VesterSale",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2205,
+                  "src": "250:10:19",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_VesterSale_$2205_$",
+                    "typeString": "type(contract VesterSale)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "250:72:19"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3243,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3234,
+                  "mutability": "mutable",
+                  "name": "imx_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3253,
+                  "src": "135:12:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3233,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "135:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3236,
+                  "mutability": "mutable",
+                  "name": "recipient_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3253,
+                  "src": "152:18:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3235,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "152:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3238,
+                  "mutability": "mutable",
+                  "name": "vestingAmount_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3253,
+                  "src": "175:19:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3237,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "175:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3240,
+                  "mutability": "mutable",
+                  "name": "vestingBegin_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3253,
+                  "src": "199:18:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3239,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "199:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3242,
+                  "mutability": "mutable",
+                  "name": "vestingEnd_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3253,
+                  "src": "222:16:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3241,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "222:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "130:112:19"
+            },
+            "returnParameters": {
+              "id": 3251,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "323:0:19"
+            },
+            "scope": 3275,
+            "src": "119:206:19",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 3255,
+            "mutability": "mutable",
+            "name": "_blockTimestamp",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 3275,
+            "src": "334:20:19",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 3254,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "334:4:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "baseFunctions": [
+              2204
+            ],
+            "body": {
+              "id": 3263,
+              "nodeType": "Block",
+              "src": "431:32:19",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3261,
+                    "name": "_blockTimestamp",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3255,
+                    "src": "443:15:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3260,
+                  "id": 3262,
+                  "nodeType": "Return",
+                  "src": "436:22:19"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "796b89b9",
+            "id": 3264,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBlockTimestamp",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 3257,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "402:8:19"
+            },
+            "parameters": {
+              "id": 3256,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "384:2:19"
+            },
+            "returnParameters": {
+              "id": 3260,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3259,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3264,
+                  "src": "425:4:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3258,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "425:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "424:6:19"
+            },
+            "scope": 3275,
+            "src": "358:105:19",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3273,
+              "nodeType": "Block",
+              "src": "521:42:19",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3271,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 3269,
+                      "name": "_blockTimestamp",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3255,
+                      "src": "526:15:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3270,
+                      "name": "blockTimestamp",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3266,
+                      "src": "544:14:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "526:32:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 3272,
+                  "nodeType": "ExpressionStatement",
+                  "src": "526:32:19"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "e0abdf66",
+            "id": 3274,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBlockTimestamp",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3267,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3266,
+                  "mutability": "mutable",
+                  "name": "blockTimestamp",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3274,
+                  "src": "493:19:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3265,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "493:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "492:21:19"
+            },
+            "returnParameters": {
+              "id": 3268,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "521:0:19"
+            },
+            "scope": 3275,
+            "src": "466:97:19",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3276,
+        "src": "71:498:19"
+      }
+    ],
+    "src": "0:569:19"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/simor/Desktop/imx/contracts/test/VesterSaleHarness.sol",
+    "exportedSymbols": {
+      "VesterSaleHarness": [
+        3275
+      ]
+    },
+    "id": 3276,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3229,
+        "literals": [
+          "solidity",
+          "=",
+          "0.6",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:19"
+      },
+      {
+        "absolutePath": "/C/Users/simor/Desktop/imx/contracts/VesterSale.sol",
+        "file": "../../contracts/VesterSale.sol",
+        "id": 3230,
+        "nodeType": "ImportDirective",
+        "scope": 3276,
+        "sourceUnit": 2206,
+        "src": "27:40:19",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3231,
+              "name": "VesterSale",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2205,
+              "src": "101:10:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_VesterSale_$2205",
+                "typeString": "contract VesterSale"
+              }
+            },
+            "id": 3232,
+            "nodeType": "InheritanceSpecifier",
+            "src": "101:10:19"
+          }
+        ],
+        "contractDependencies": [
+          2205,
+          2470,
+          2512
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3275,
+        "linearizedBaseContracts": [
+          3275,
+          2205,
+          2470,
+          2512
+        ],
+        "name": "VesterSaleHarness",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 3252,
+              "nodeType": "Block",
+              "src": "323:2:19",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 3253,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 3245,
+                    "name": "imx_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3234,
+                    "src": "261:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 3246,
+                    "name": "recipient_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3236,
+                    "src": "267:10:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 3247,
+                    "name": "vestingAmount_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3238,
+                    "src": "279:14:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 3248,
+                    "name": "vestingBegin_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3240,
+                    "src": "295:13:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 3249,
+                    "name": "vestingEnd_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3242,
+                    "src": "310:11:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 3250,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 3244,
+                  "name": "VesterSale",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2205,
+                  "src": "250:10:19",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_VesterSale_$2205_$",
+                    "typeString": "type(contract VesterSale)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "250:72:19"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3243,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3234,
+                  "mutability": "mutable",
+                  "name": "imx_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3253,
+                  "src": "135:12:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3233,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "135:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3236,
+                  "mutability": "mutable",
+                  "name": "recipient_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3253,
+                  "src": "152:18:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3235,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "152:7:19",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3238,
+                  "mutability": "mutable",
+                  "name": "vestingAmount_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3253,
+                  "src": "175:19:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3237,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "175:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3240,
+                  "mutability": "mutable",
+                  "name": "vestingBegin_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3253,
+                  "src": "199:18:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3239,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "199:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3242,
+                  "mutability": "mutable",
+                  "name": "vestingEnd_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3253,
+                  "src": "222:16:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3241,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "222:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "130:112:19"
+            },
+            "returnParameters": {
+              "id": 3251,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "323:0:19"
+            },
+            "scope": 3275,
+            "src": "119:206:19",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 3255,
+            "mutability": "mutable",
+            "name": "_blockTimestamp",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 3275,
+            "src": "334:20:19",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 3254,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "334:4:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "baseFunctions": [
+              2204
+            ],
+            "body": {
+              "id": 3263,
+              "nodeType": "Block",
+              "src": "431:32:19",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3261,
+                    "name": "_blockTimestamp",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 3255,
+                    "src": "443:15:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3260,
+                  "id": 3262,
+                  "nodeType": "Return",
+                  "src": "436:22:19"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "796b89b9",
+            "id": 3264,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBlockTimestamp",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 3257,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "402:8:19"
+            },
+            "parameters": {
+              "id": 3256,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "384:2:19"
+            },
+            "returnParameters": {
+              "id": 3260,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3259,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3264,
+                  "src": "425:4:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3258,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "425:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "424:6:19"
+            },
+            "scope": 3275,
+            "src": "358:105:19",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3273,
+              "nodeType": "Block",
+              "src": "521:42:19",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3271,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 3269,
+                      "name": "_blockTimestamp",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3255,
+                      "src": "526:15:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3270,
+                      "name": "blockTimestamp",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3266,
+                      "src": "544:14:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "526:32:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 3272,
+                  "nodeType": "ExpressionStatement",
+                  "src": "526:32:19"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "e0abdf66",
+            "id": 3274,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBlockTimestamp",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 3267,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3266,
+                  "mutability": "mutable",
+                  "name": "blockTimestamp",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 3274,
+                  "src": "493:19:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3265,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "493:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "492:21:19"
+            },
+            "returnParameters": {
+              "id": 3268,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "521:0:19"
+            },
+            "scope": 3275,
+            "src": "466:97:19",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3276,
+        "src": "71:498:19"
+      }
+    ],
+    "src": "0:569:19"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.6+commit.6c089d02.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.2",
+  "updatedAt": "2021-03-09T19:15:19.123Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

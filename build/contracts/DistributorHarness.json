@@ -1,0 +1,2339 @@
+{
+  "contractName": "DistributorHarness",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "imx_",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "claimable_",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "claim",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "credit",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "claimable",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "imx",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "recipients",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "lastShareIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "credit",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "shareIndex",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalShares",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "updateCredit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "credit",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "updateShareIndex",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_shareIndex",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "setRecipientShares",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "editRecipientHarness",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"imx_\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"claimable_\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"claim\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"credit\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"claimable\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"shares\",\"type\":\"uint256\"}],\"name\":\"editRecipientHarness\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"imx\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"recipients\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"shares\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"lastShareIndex\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"credit\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"shares\",\"type\":\"uint256\"}],\"name\":\"setRecipientShares\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"shareIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalShares\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"updateCredit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"credit\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"updateShareIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_shareIndex\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/simor/Desktop/imx/contracts/test/DistributorHarness.sol\":\"DistributorHarness\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"/C/Users/simor/Desktop/imx/contracts/Distributor.sol\":{\"keccak256\":\"0x5c40c2058d334096525d6ce0da2ac0a47053592789ebdfff9fb63a9d718eee26\",\"urls\":[\"bzz-raw://3c1aaa301013e3e331df3edb90ca7f5d2c6caae399e887d648977d78f7f5ca52\",\"dweb:/ipfs/QmY5cbNT3BPQzLVREpP2b4GWnVgRN4T9uCnJcFcPpqjxfq\"]},\"/C/Users/simor/Desktop/imx/contracts/interfaces/IClaimable.sol\":{\"keccak256\":\"0x9f13ef1b8b3fd89f51bfda83861e68b279d1da2f8336c023dddcdebf0a5de91b\",\"urls\":[\"bzz-raw://19ab2a85b886328c482d70004b079e5b93ec98c6373e4a3ded749002ed89c8e1\",\"dweb:/ipfs/QmfHBn2iJCyNs8PbjCoCh7GoJocTVxjeEfL2szXsM2vA7F\"]},\"/C/Users/simor/Desktop/imx/contracts/interfaces/IImx.sol\":{\"keccak256\":\"0xc3bebefc66d4b25346721d8bde24792cf665ef3817757bcb13fcc7e3f91c50e0\",\"urls\":[\"bzz-raw://a174d6135744c0a08d33a47b9b6e1871de414cbe1aa23ad85658569615e77a52\",\"dweb:/ipfs/QmPuLMfKfEByF9Fycc7P6AL3frDHbA4dBQtyCTqcF4dxpQ\"]},\"/C/Users/simor/Desktop/imx/contracts/libraries/SafeMath.sol\":{\"keccak256\":\"0x6600fcb47f1df50e408a95ad498c686019a4afe3742f29addaab6db913ab6762\",\"urls\":[\"bzz-raw://65c432748397aae2c903b6f183947051ac2ff4d3bb6fe024097bb534c7428750\",\"dweb:/ipfs/QmUczJBH2Y31xcPNQZQ6ZfdqBn6bSnUTJ92rBbdTZKEdpd\"]},\"/C/Users/simor/Desktop/imx/contracts/test/DistributorHarness.sol\":{\"keccak256\":\"0xdf359bdbcd31f24a13b70dd654d788717aec9bbf89ffc604154732a82b6e16c9\",\"urls\":[\"bzz-raw://240225c13f6fa2c5dade49a5acb902fd063813f1268a70affcc56b52f14d12c6\",\"dweb:/ipfs/QmZ6rxKdNChjfs1w7nqDuUKPEp97i1os8XK2VwRR6oJYJv\"]}},\"version\":1}",
+  "bytecode": "0x60c06040526003805460ff1916600117905534801561001d57600080fd5b50604051610a86380380610a868339818101604052604081101561004057600080fd5b5080516020909101516001600160601b0319606092831b8116608052911b1660a05260805160601c60a05160601c6109f1610095600039806104555280610527525080610228528061035452506109f16000f3fe608060405234801561001057600080fd5b50600436106100be5760003560e01c8063af38d75711610076578063b7034b581161005b578063b7034b5814610194578063c56ad1ad146101cd578063eb820312146101d5576100be565b8063af38d75714610184578063b260187d1461018c576100be565b806345c08718116100a757806345c087181461010e5780634e71d92d1461014157806359a6173f14610149576100be565b80630f08025f146100c35780633a98ef39146100f4575b600080fd5b6100cb610226565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b6100fc61024a565b60408051918252519081900360200190f35b6100fc6004803603602081101561012457600080fd5b503573ffffffffffffffffffffffffffffffffffffffff16610250565b6100fc6102f4565b6101826004803603604081101561015f57600080fd5b5073ffffffffffffffffffffffffffffffffffffffff81351690602001356103de565b005b6100cb610453565b6100fc610477565b610182600480360360408110156101aa57600080fd5b5073ffffffffffffffffffffffffffffffffffffffff813516906020013561064d565b6100fc61065b565b610208600480360360208110156101eb57600080fd5b503573ffffffffffffffffffffffffffffffffffffffff16610661565b60408051938452602084019290925282820152519081900360600190f35b7f000000000000000000000000000000000000000000000000000000000000000081565b60015481565b60008061025b610477565b90508061026c5760009150506102ef565b73ffffffffffffffffffffffffffffffffffffffff831660009081526020819052604090208054600182015474010000000000000000000000000000000000000000916102d0916102c490869063ffffffff61068216565b9063ffffffff6106cd16565b816102d757fe5b60028301805460019094019490945504019081905590505b919050565b60006102ff33610250565b905080156103db573360008181526020818152604080832060020183905580517fa9059cbb000000000000000000000000000000000000000000000000000000008152600481019490945260248401859052517f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff169363a9059cbb9360448083019493928390030190829087803b1580156103ae57600080fd5b505af11580156103c2573d6000803e3d6000fd5b505050506040513d60208110156103d857600080fd5b50505b90565b73ffffffffffffffffffffffffffffffffffffffff8216600090815260208190526040902080548281101561042a576001546104229082850363ffffffff61074016565b600155610443565b60015461043f9084830363ffffffff61068216565b6001555b5090815560025460019091015550565b7f000000000000000000000000000000000000000000000000000000000000000081565b60035460009060ff166104eb57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601660248201527f4469737472696275746f723a205245454e544552454400000000000000000000604482015290519081900360640190fd5b600380547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00169055600154610523575060025461061f565b60007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16634e71d92d6040518163ffffffff1660e01b8152600401602060405180830381600087803b15801561058d57600080fd5b505af11580156105a1573d6000803e3d6000fd5b505050506040513d60208110156105b757600080fd5b50519050806105ca57505060025461061f565b61061660025461060a6001546105fe74010000000000000000000000000000000000000000866106cd90919063ffffffff16565b9063ffffffff6107b416565b9063ffffffff61074016565b60028190559150505b600380547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0016600117905590565b61065782826107f6565b5050565b60025481565b60006020819052908152604090208054600182015460029092015490919083565b60006106c483836040518060400160405280601f81526020017f536166654d6174683a207375627472616374696f6e20756e646572666c6f770081525061086a565b90505b92915050565b6000826106dc575060006106c7565b828202828482816106e957fe5b04146106c4576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602181526020018061099b6021913960400191505060405180910390fd5b6000828201838110156106c457604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b60006106c483836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f00000000000081525061091b565b6107ff82610250565b5073ffffffffffffffffffffffffffffffffffffffff8216600090815260208190526040902080548281101561084c576001546108449082850363ffffffff61074016565b600155610865565b6001546108619084830363ffffffff61068216565b6001555b505550565b60008184841115610913576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825283818151815260200191508051906020019080838360005b838110156108d85781810151838201526020016108c0565b50505050905090810190601f1680156109055780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b505050900390565b60008183610984576040517f08c379a00000000000000000000000000000000000000000000000000000000081526020600482018181528351602484015283519092839260449091019190850190808383600083156108d85781810151838201526020016108c0565b50600083858161099057fe5b049594505050505056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77a26469706673582212206eedcd42586241104d4c11e77a70315b373f9dedefa3fbe718eca1281b43f0db64736f6c63430006060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100be5760003560e01c8063af38d75711610076578063b7034b581161005b578063b7034b5814610194578063c56ad1ad146101cd578063eb820312146101d5576100be565b8063af38d75714610184578063b260187d1461018c576100be565b806345c08718116100a757806345c087181461010e5780634e71d92d1461014157806359a6173f14610149576100be565b80630f08025f146100c35780633a98ef39146100f4575b600080fd5b6100cb610226565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b6100fc61024a565b60408051918252519081900360200190f35b6100fc6004803603602081101561012457600080fd5b503573ffffffffffffffffffffffffffffffffffffffff16610250565b6100fc6102f4565b6101826004803603604081101561015f57600080fd5b5073ffffffffffffffffffffffffffffffffffffffff81351690602001356103de565b005b6100cb610453565b6100fc610477565b610182600480360360408110156101aa57600080fd5b5073ffffffffffffffffffffffffffffffffffffffff813516906020013561064d565b6100fc61065b565b610208600480360360208110156101eb57600080fd5b503573ffffffffffffffffffffffffffffffffffffffff16610661565b60408051938452602084019290925282820152519081900360600190f35b7f000000000000000000000000000000000000000000000000000000000000000081565b60015481565b60008061025b610477565b90508061026c5760009150506102ef565b73ffffffffffffffffffffffffffffffffffffffff831660009081526020819052604090208054600182015474010000000000000000000000000000000000000000916102d0916102c490869063ffffffff61068216565b9063ffffffff6106cd16565b816102d757fe5b60028301805460019094019490945504019081905590505b919050565b60006102ff33610250565b905080156103db573360008181526020818152604080832060020183905580517fa9059cbb000000000000000000000000000000000000000000000000000000008152600481019490945260248401859052517f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff169363a9059cbb9360448083019493928390030190829087803b1580156103ae57600080fd5b505af11580156103c2573d6000803e3d6000fd5b505050506040513d60208110156103d857600080fd5b50505b90565b73ffffffffffffffffffffffffffffffffffffffff8216600090815260208190526040902080548281101561042a576001546104229082850363ffffffff61074016565b600155610443565b60015461043f9084830363ffffffff61068216565b6001555b5090815560025460019091015550565b7f000000000000000000000000000000000000000000000000000000000000000081565b60035460009060ff166104eb57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601660248201527f4469737472696275746f723a205245454e544552454400000000000000000000604482015290519081900360640190fd5b600380547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00169055600154610523575060025461061f565b60007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16634e71d92d6040518163ffffffff1660e01b8152600401602060405180830381600087803b15801561058d57600080fd5b505af11580156105a1573d6000803e3d6000fd5b505050506040513d60208110156105b757600080fd5b50519050806105ca57505060025461061f565b61061660025461060a6001546105fe74010000000000000000000000000000000000000000866106cd90919063ffffffff16565b9063ffffffff6107b416565b9063ffffffff61074016565b60028190559150505b600380547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0016600117905590565b61065782826107f6565b5050565b60025481565b60006020819052908152604090208054600182015460029092015490919083565b60006106c483836040518060400160405280601f81526020017f536166654d6174683a207375627472616374696f6e20756e646572666c6f770081525061086a565b90505b92915050565b6000826106dc575060006106c7565b828202828482816106e957fe5b04146106c4576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602181526020018061099b6021913960400191505060405180910390fd5b6000828201838110156106c457604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b60006106c483836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f00000000000081525061091b565b6107ff82610250565b5073ffffffffffffffffffffffffffffffffffffffff8216600090815260208190526040902080548281101561084c576001546108449082850363ffffffff61074016565b600155610865565b6001546108619084830363ffffffff61068216565b6001555b505550565b60008184841115610913576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825283818151815260200191508051906020019080838360005b838110156108d85781810151838201526020016108c0565b50505050905090810190601f1680156109055780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b505050900390565b60008183610984576040517f08c379a00000000000000000000000000000000000000000000000000000000081526020600482018181528351602484015283519092839260449091019190850190808383600083156108d85781810151838201526020016108c0565b50600083858161099057fe5b049594505050505056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77a26469706673582212206eedcd42586241104d4c11e77a70315b373f9dedefa3fbe718eca1281b43f0db64736f6c63430006060033",
+  "immutableReferences": {
+    "11": [
+      {
+        "length": 32,
+        "start": 552
+      },
+      {
+        "length": 32,
+        "start": 852
+      }
+    ],
+    "13": [
+      {
+        "length": 32,
+        "start": 1109
+      },
+      {
+        "length": 32,
+        "start": 1319
+      }
+    ]
+  },
+  "sourceMap": "72:663:14:-:0;;;1965:32:0;;;-1:-1:-1;;1965:32:0;1993:4;1965:32;;;119:95:14;2:2:-1;;;;27:1;24;17:12;2:2;119:95:14;;;;;;;;;;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;119:95:14;;;;;;;-1:-1:-1;;;;;;545:10:0;;;;;;;;560:22;;;;;72:663:14;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "72:663:14:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;72:663:14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;12:1:-1;9;2:12;214:28:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;421:23;;;:::i;:::-;;;;;;;;;;;;;;;;917:382;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;917:382:0;;;;:::i;1304:215::-;;;:::i;220:383:14:-;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;220:383:14;;;;;;;;;:::i;:::-;;246:34:0;;;:::i;593:318::-;;;:::i;609:123:14:-;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;609:123:14;;;;;;;;;:::i;448:22:0:-;;;:::i;367:47::-;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;367:47:0;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;214:28;;;:::o;421:23::-;;;;:::o;917:382::-;972:11;990:16;1009:18;:16;:18::i;:::-;990:37;-1:-1:-1;1036:16:0;1032:30;;1061:1;1054:8;;;;;1032:30;1097:19;;;1067:27;1097:19;;;;;;;;;;1195:16;;1165:24;;;;1215:6;;1149:63;;:41;;:11;;:41;:15;:41;:::i;:::-;:45;:63;:45;:63;:::i;:::-;:72;;;;;1130:16;;;;;1226:24;;;;:38;;;;1149:72;1130:91;1269:25;;;;1130:91;-1:-1:-1;917:382:0;;;;:::o;1304:215::-;1354:11;1381:24;1394:10;1381:12;:24::i;:::-;1372:33;-1:-1:-1;1414:10:0;;1410:105;;1443:10;1464:1;1432:22;;;;;;;;;;;:29;;:33;;;1471:38;;;;;;;;;;;;;;;;;;;1476:3;1432:22;1471:18;;;;:38;;;;;1432:22;1471:38;;;;;;;;:18;:38;;;2:2:-1;;;;27:1;24;17:12;2:2;1471:38:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1471:38:0;;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;-1:-1;;1410:105:0;1304:215;:::o;220:383:14:-;328:19;;;298:27;328:19;;;;;;;;;;370:16;;395:19;;;391:135;;;430:11;;:36;;446:19;;;430:36;:15;:36;:::i;:::-;416:11;:50;391:135;;;490:11;;:36;;506:19;;;490:36;:15;:36;:::i;:::-;476:11;:50;391:135;-1:-1:-1;531:25:14;;;588:10;;561:24;;;;:37;-1:-1:-1;220:383:14:o;246:34:0:-;;;:::o;593:318::-;2038:11;;658:16;;2038:11;;2030:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2081:11;:19;;;;;;;685:11;681:39:::1;;-1:-1:-1::0;710:10:0::1;::::0;703:17:::1;;681:39;725:11;750:9;739:27;;;:29;;;;;;;;;;;;;;;;;;;;;;;5:9:-1;2:2;;;27:1;24::::0;17:12:::1;2:2;739:29:0;;;;8:9:-1;5:2;;;45:16;42:1;39::::0;24:38:::1;77:16;74:1;67:27;5:2;739:29:0;;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28::::0;21:12:::1;4:2;-1:-1:::0;739:29:0;;-1:-1:-1;777:11:0;773:34:::1;;-1:-1:-1::0;;797:10:0::1;::::0;790:17:::1;;773:34;826:51;866:10;;826:35;849:11;;826:18;837:6;826;:10;;:18;;;;:::i;:::-;:22:::0;:35:::1;:22;:35;:::i;:::-;:39:::0;:51:::1;:39;:51;:::i;:::-;882:10;:24:::0;;;812:65;-1:-1:-1;;2105:1:0::1;2111:11:::0;:18;;;;2125:4;2111:18;;;593:318;:::o;609:123:14:-;689:38;711:7;720:6;689:21;:38::i;:::-;609:123;;:::o;448:22:0:-;;;;:::o;367:47::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1821:135:13:-;1879:7;1905:44;1909:1;1912;1905:44;;;;;;;;;;;;;;;;;:3;:44::i;:::-;1898:51;;1821:135;;;;;:::o;2655:459::-;2713:7;2954:6;2950:45;;-1:-1:-1;2983:1:13;2976:8;;2950:45;3017:5;;;3021:1;3017;:5;:1;3040:5;;;;;:10;3032:56;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;958:176;1016:7;1047:5;;;1070:6;;;;1062:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4266:130;4324:7;4350:39;4354:1;4357;4350:39;;;;;;;;;;;;;;;;;:3;:39::i;1525:364:0:-;1600:21;1613:7;1600:12;:21::i;:::-;-1:-1:-1;1656:19:0;;;1626:27;1656:19;;;;;;;;;;1698:16;;1723:19;;;1719:135;;;1758:11;;:36;;1774:19;;;1758:36;:15;:36;:::i;:::-;1744:11;:50;1719:135;;;1818:11;;:36;;1834:19;;;1818:36;:15;:36;:::i;:::-;1804:11;:50;1719:135;-1:-1:-1;1859:25:0;-1:-1:-1;1525:364:0:o;2235:187:13:-;2321:7;2356:12;2348:6;;;;2340:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;2340:29:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;2391:5:13;;;2235:187::o;4871:338::-;4957:7;5057:12;5050:5;5042:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;27:10:-1;;8:100;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;5042:28:13;;5080:9;5096:1;5092;:5;;;;;;;4871:338;-1:-1:-1;;;;;4871:338:13:o",
+  "source": "pragma solidity =0.6.6;\r\n\r\nimport \"../../contracts/Distributor.sol\";\r\n\r\ncontract DistributorHarness is Distributor {\r\n\tconstructor(\r\n\t\taddress imx_,\r\n\t\taddress claimable_\r\n\t) public Distributor(imx_, claimable_) {}\r\n\t\r\n\tfunction setRecipientShares(address account, uint shares) public virtual {\r\n\t\tRecipient storage recipient = recipients[account];\r\n\t\tuint prevShares = recipient.shares;\r\n\t\tif (prevShares < shares) totalShares = totalShares.add(shares - prevShares);\r\n\t\telse totalShares = totalShares.sub(prevShares - shares);\r\n\t\trecipient.shares = shares;\r\n\t\trecipient.lastShareIndex = shareIndex;\r\n\t}\r\n\t\r\n\tfunction editRecipientHarness(address account, uint shares) public virtual {\r\n\t\teditRecipientInternal(account, shares);\r\n\t}\r\n}",
+  "sourcePath": "C:/Users/simor/Desktop/imx/contracts/test/DistributorHarness.sol",
+  "ast": {
+    "absolutePath": "/C/Users/simor/Desktop/imx/contracts/test/DistributorHarness.sol",
+    "exportedSymbols": {
+      "DistributorHarness": [
+        2933
+      ]
+    },
+    "id": 2934,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2851,
+        "literals": [
+          "solidity",
+          "=",
+          "0.6",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:14"
+      },
+      {
+        "absolutePath": "/C/Users/simor/Desktop/imx/contracts/Distributor.sol",
+        "file": "../../contracts/Distributor.sol",
+        "id": 2852,
+        "nodeType": "ImportDirective",
+        "scope": 2934,
+        "sourceUnit": 256,
+        "src": "27:41:14",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2853,
+              "name": "Distributor",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 255,
+              "src": "103:11:14",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Distributor_$255",
+                "typeString": "contract Distributor"
+              }
+            },
+            "id": 2854,
+            "nodeType": "InheritanceSpecifier",
+            "src": "103:11:14"
+          }
+        ],
+        "contractDependencies": [
+          255,
+          2470
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2933,
+        "linearizedBaseContracts": [
+          2933,
+          255,
+          2470
+        ],
+        "name": "DistributorHarness",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2865,
+              "nodeType": "Block",
+              "src": "212:2:14",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2866,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 2861,
+                    "name": "imx_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2856,
+                    "src": "194:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 2862,
+                    "name": "claimable_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2858,
+                    "src": "200:10:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 2863,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2860,
+                  "name": "Distributor",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 255,
+                  "src": "182:11:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Distributor_$255_$",
+                    "typeString": "type(contract Distributor)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "182:29:14"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2859,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2856,
+                  "mutability": "mutable",
+                  "name": "imx_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2866,
+                  "src": "135:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2855,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "135:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2858,
+                  "mutability": "mutable",
+                  "name": "claimable_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2866,
+                  "src": "152:18:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2857,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "152:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "130:44:14"
+            },
+            "returnParameters": {
+              "id": 2864,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "212:0:14"
+            },
+            "scope": 2933,
+            "src": "119:95:14",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2918,
+              "nodeType": "Block",
+              "src": "293:310:14",
+              "statements": [
+                {
+                  "assignments": [
+                    2874
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2874,
+                      "mutability": "mutable",
+                      "name": "recipient",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 2918,
+                      "src": "298:27:14",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Recipient_$20_storage_ptr",
+                        "typeString": "struct Distributor.Recipient"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 2873,
+                        "name": "Recipient",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 20,
+                        "src": "298:9:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Recipient_$20_storage_ptr",
+                          "typeString": "struct Distributor.Recipient"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2878,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 2875,
+                      "name": "recipients",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 24,
+                      "src": "328:10:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Recipient_$20_storage_$",
+                        "typeString": "mapping(address => struct Distributor.Recipient storage ref)"
+                      }
+                    },
+                    "id": 2877,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 2876,
+                      "name": "account",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2868,
+                      "src": "339:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "328:19:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Recipient_$20_storage",
+                      "typeString": "struct Distributor.Recipient storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "298:49:14"
+                },
+                {
+                  "assignments": [
+                    2880
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2880,
+                      "mutability": "mutable",
+                      "name": "prevShares",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 2918,
+                      "src": "352:15:14",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 2879,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "352:4:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2883,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2881,
+                      "name": "recipient",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2874,
+                      "src": "370:9:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Recipient_$20_storage_ptr",
+                        "typeString": "struct Distributor.Recipient storage pointer"
+                      }
+                    },
+                    "id": 2882,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "shares",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 15,
+                    "src": "370:16:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "352:34:14"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2886,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2884,
+                      "name": "prevShares",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2880,
+                      "src": "395:10:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 2885,
+                      "name": "shares",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2870,
+                      "src": "408:6:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "395:19:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2903,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftHandSide": {
+                        "argumentTypes": null,
+                        "id": 2896,
+                        "name": "totalShares",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26,
+                        "src": "476:11:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "Assignment",
+                      "operator": "=",
+                      "rightHandSide": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 2901,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 2899,
+                              "name": "prevShares",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2880,
+                              "src": "506:10:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "-",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 2900,
+                              "name": "shares",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2870,
+                              "src": "519:6:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "src": "506:19:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2897,
+                            "name": "totalShares",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 26,
+                            "src": "490:11:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "id": 2898,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sub",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 2662,
+                          "src": "490:15:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                            "typeString": "function (uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 2902,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "490:36:14",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "476:50:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2904,
+                    "nodeType": "ExpressionStatement",
+                    "src": "476:50:14"
+                  },
+                  "id": 2905,
+                  "nodeType": "IfStatement",
+                  "src": "391:135:14",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2894,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftHandSide": {
+                        "argumentTypes": null,
+                        "id": 2887,
+                        "name": "totalShares",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26,
+                        "src": "416:11:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "Assignment",
+                      "operator": "=",
+                      "rightHandSide": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 2892,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 2890,
+                              "name": "shares",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2870,
+                              "src": "446:6:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "-",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 2891,
+                              "name": "prevShares",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2880,
+                              "src": "455:10:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "src": "446:19:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2888,
+                            "name": "totalShares",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 26,
+                            "src": "430:11:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "id": 2889,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "add",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 2617,
+                          "src": "430:15:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                            "typeString": "function (uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 2893,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "430:36:14",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "416:50:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2895,
+                    "nodeType": "ExpressionStatement",
+                    "src": "416:50:14"
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2910,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2906,
+                        "name": "recipient",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2874,
+                        "src": "531:9:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Recipient_$20_storage_ptr",
+                          "typeString": "struct Distributor.Recipient storage pointer"
+                        }
+                      },
+                      "id": 2908,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "shares",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 15,
+                      "src": "531:16:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2909,
+                      "name": "shares",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2870,
+                      "src": "550:6:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "531:25:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2911,
+                  "nodeType": "ExpressionStatement",
+                  "src": "531:25:14"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2916,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2912,
+                        "name": "recipient",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2874,
+                        "src": "561:9:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Recipient_$20_storage_ptr",
+                          "typeString": "struct Distributor.Recipient storage pointer"
+                        }
+                      },
+                      "id": 2914,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "lastShareIndex",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 17,
+                      "src": "561:24:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2915,
+                      "name": "shareIndex",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 28,
+                      "src": "588:10:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "561:37:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2917,
+                  "nodeType": "ExpressionStatement",
+                  "src": "561:37:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "59a6173f",
+            "id": 2919,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRecipientShares",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2871,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2868,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2919,
+                  "src": "248:15:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2867,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "248:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2870,
+                  "mutability": "mutable",
+                  "name": "shares",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2919,
+                  "src": "265:11:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2869,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "265:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "247:30:14"
+            },
+            "returnParameters": {
+              "id": 2872,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "293:0:14"
+            },
+            "scope": 2933,
+            "src": "220:383:14",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2931,
+              "nodeType": "Block",
+              "src": "684:48:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2927,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2921,
+                        "src": "711:7:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 2928,
+                        "name": "shares",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2923,
+                        "src": "720:6:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 2926,
+                      "name": "editRecipientInternal",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 234,
+                      "src": "689:21:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256)"
+                      }
+                    },
+                    "id": 2929,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "689:38:14",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2930,
+                  "nodeType": "ExpressionStatement",
+                  "src": "689:38:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "b7034b58",
+            "id": 2932,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "editRecipientHarness",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2924,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2921,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2932,
+                  "src": "639:15:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2920,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "639:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2923,
+                  "mutability": "mutable",
+                  "name": "shares",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2932,
+                  "src": "656:11:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2922,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "656:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "638:30:14"
+            },
+            "returnParameters": {
+              "id": 2925,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "684:0:14"
+            },
+            "scope": 2933,
+            "src": "609:123:14",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2934,
+        "src": "72:663:14"
+      }
+    ],
+    "src": "0:735:14"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/simor/Desktop/imx/contracts/test/DistributorHarness.sol",
+    "exportedSymbols": {
+      "DistributorHarness": [
+        2933
+      ]
+    },
+    "id": 2934,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2851,
+        "literals": [
+          "solidity",
+          "=",
+          "0.6",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:14"
+      },
+      {
+        "absolutePath": "/C/Users/simor/Desktop/imx/contracts/Distributor.sol",
+        "file": "../../contracts/Distributor.sol",
+        "id": 2852,
+        "nodeType": "ImportDirective",
+        "scope": 2934,
+        "sourceUnit": 256,
+        "src": "27:41:14",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2853,
+              "name": "Distributor",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 255,
+              "src": "103:11:14",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Distributor_$255",
+                "typeString": "contract Distributor"
+              }
+            },
+            "id": 2854,
+            "nodeType": "InheritanceSpecifier",
+            "src": "103:11:14"
+          }
+        ],
+        "contractDependencies": [
+          255,
+          2470
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2933,
+        "linearizedBaseContracts": [
+          2933,
+          255,
+          2470
+        ],
+        "name": "DistributorHarness",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2865,
+              "nodeType": "Block",
+              "src": "212:2:14",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2866,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 2861,
+                    "name": "imx_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2856,
+                    "src": "194:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 2862,
+                    "name": "claimable_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2858,
+                    "src": "200:10:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 2863,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2860,
+                  "name": "Distributor",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 255,
+                  "src": "182:11:14",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Distributor_$255_$",
+                    "typeString": "type(contract Distributor)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "182:29:14"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2859,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2856,
+                  "mutability": "mutable",
+                  "name": "imx_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2866,
+                  "src": "135:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2855,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "135:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2858,
+                  "mutability": "mutable",
+                  "name": "claimable_",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2866,
+                  "src": "152:18:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2857,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "152:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "130:44:14"
+            },
+            "returnParameters": {
+              "id": 2864,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "212:0:14"
+            },
+            "scope": 2933,
+            "src": "119:95:14",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2918,
+              "nodeType": "Block",
+              "src": "293:310:14",
+              "statements": [
+                {
+                  "assignments": [
+                    2874
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2874,
+                      "mutability": "mutable",
+                      "name": "recipient",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 2918,
+                      "src": "298:27:14",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Recipient_$20_storage_ptr",
+                        "typeString": "struct Distributor.Recipient"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 2873,
+                        "name": "Recipient",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 20,
+                        "src": "298:9:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Recipient_$20_storage_ptr",
+                          "typeString": "struct Distributor.Recipient"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2878,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 2875,
+                      "name": "recipients",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 24,
+                      "src": "328:10:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Recipient_$20_storage_$",
+                        "typeString": "mapping(address => struct Distributor.Recipient storage ref)"
+                      }
+                    },
+                    "id": 2877,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 2876,
+                      "name": "account",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2868,
+                      "src": "339:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "328:19:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Recipient_$20_storage",
+                      "typeString": "struct Distributor.Recipient storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "298:49:14"
+                },
+                {
+                  "assignments": [
+                    2880
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2880,
+                      "mutability": "mutable",
+                      "name": "prevShares",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 2918,
+                      "src": "352:15:14",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 2879,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "352:4:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2883,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2881,
+                      "name": "recipient",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2874,
+                      "src": "370:9:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Recipient_$20_storage_ptr",
+                        "typeString": "struct Distributor.Recipient storage pointer"
+                      }
+                    },
+                    "id": 2882,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "shares",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 15,
+                    "src": "370:16:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "352:34:14"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2886,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2884,
+                      "name": "prevShares",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2880,
+                      "src": "395:10:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 2885,
+                      "name": "shares",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2870,
+                      "src": "408:6:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "395:19:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2903,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftHandSide": {
+                        "argumentTypes": null,
+                        "id": 2896,
+                        "name": "totalShares",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26,
+                        "src": "476:11:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "Assignment",
+                      "operator": "=",
+                      "rightHandSide": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 2901,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 2899,
+                              "name": "prevShares",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2880,
+                              "src": "506:10:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "-",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 2900,
+                              "name": "shares",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2870,
+                              "src": "519:6:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "src": "506:19:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2897,
+                            "name": "totalShares",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 26,
+                            "src": "490:11:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "id": 2898,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sub",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 2662,
+                          "src": "490:15:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                            "typeString": "function (uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 2902,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "490:36:14",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "476:50:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2904,
+                    "nodeType": "ExpressionStatement",
+                    "src": "476:50:14"
+                  },
+                  "id": 2905,
+                  "nodeType": "IfStatement",
+                  "src": "391:135:14",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2894,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftHandSide": {
+                        "argumentTypes": null,
+                        "id": 2887,
+                        "name": "totalShares",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26,
+                        "src": "416:11:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "Assignment",
+                      "operator": "=",
+                      "rightHandSide": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 2892,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 2890,
+                              "name": "shares",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2870,
+                              "src": "446:6:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "-",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 2891,
+                              "name": "prevShares",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2880,
+                              "src": "455:10:14",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "src": "446:19:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2888,
+                            "name": "totalShares",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 26,
+                            "src": "430:11:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "id": 2889,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "add",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 2617,
+                          "src": "430:15:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                            "typeString": "function (uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 2893,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "430:36:14",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "416:50:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2895,
+                    "nodeType": "ExpressionStatement",
+                    "src": "416:50:14"
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2910,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2906,
+                        "name": "recipient",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2874,
+                        "src": "531:9:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Recipient_$20_storage_ptr",
+                          "typeString": "struct Distributor.Recipient storage pointer"
+                        }
+                      },
+                      "id": 2908,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "shares",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 15,
+                      "src": "531:16:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2909,
+                      "name": "shares",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2870,
+                      "src": "550:6:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "531:25:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2911,
+                  "nodeType": "ExpressionStatement",
+                  "src": "531:25:14"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2916,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2912,
+                        "name": "recipient",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2874,
+                        "src": "561:9:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Recipient_$20_storage_ptr",
+                          "typeString": "struct Distributor.Recipient storage pointer"
+                        }
+                      },
+                      "id": 2914,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "lastShareIndex",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 17,
+                      "src": "561:24:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2915,
+                      "name": "shareIndex",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 28,
+                      "src": "588:10:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "561:37:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2917,
+                  "nodeType": "ExpressionStatement",
+                  "src": "561:37:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "59a6173f",
+            "id": 2919,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRecipientShares",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2871,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2868,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2919,
+                  "src": "248:15:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2867,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "248:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2870,
+                  "mutability": "mutable",
+                  "name": "shares",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2919,
+                  "src": "265:11:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2869,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "265:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "247:30:14"
+            },
+            "returnParameters": {
+              "id": 2872,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "293:0:14"
+            },
+            "scope": 2933,
+            "src": "220:383:14",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2931,
+              "nodeType": "Block",
+              "src": "684:48:14",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2927,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2921,
+                        "src": "711:7:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 2928,
+                        "name": "shares",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2923,
+                        "src": "720:6:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 2926,
+                      "name": "editRecipientInternal",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 234,
+                      "src": "689:21:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256)"
+                      }
+                    },
+                    "id": 2929,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "689:38:14",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2930,
+                  "nodeType": "ExpressionStatement",
+                  "src": "689:38:14"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "b7034b58",
+            "id": 2932,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "editRecipientHarness",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2924,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2921,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2932,
+                  "src": "639:15:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2920,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "639:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2923,
+                  "mutability": "mutable",
+                  "name": "shares",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2932,
+                  "src": "656:11:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2922,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "656:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "638:30:14"
+            },
+            "returnParameters": {
+              "id": 2925,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "684:0:14"
+            },
+            "scope": 2933,
+            "src": "609:123:14",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2934,
+        "src": "72:663:14"
+      }
+    ],
+    "src": "0:735:14"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.6+commit.6c089d02.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.2",
+  "updatedAt": "2021-03-09T19:15:19.115Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

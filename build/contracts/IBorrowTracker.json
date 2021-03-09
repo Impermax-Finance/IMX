@@ -1,0 +1,363 @@
+{
+  "contractName": "IBorrowTracker",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "borrower",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "borrowBalance",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "borrowIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "trackBorrow",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"borrower\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"borrowBalance\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"borrowIndex\",\"type\":\"uint256\"}],\"name\":\"trackBorrow\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/simor/Desktop/imx/contracts/interfaces/IBorrowTracker.sol\":\"IBorrowTracker\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"/C/Users/simor/Desktop/imx/contracts/interfaces/IBorrowTracker.sol\":{\"keccak256\":\"0xc2ddd380effc1179ff0ca88f4733113ff8ab9b7317e75483df57abc2f4dfab0b\",\"urls\":[\"bzz-raw://3bde59cee4b505dc0ed83cc67e6a26a530b08dfe02bdaf9a8da096576a630ff5\",\"dweb:/ipfs/QmNdnZBVo4eWPirmUU8AhoC5adUbS2xferbeBi1AZkaLtW\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity >=0.5.0;\r\n\r\ninterface IBorrowTracker {\r\n\tfunction trackBorrow(address borrower, uint borrowBalance, uint borrowIndex) external;\r\n}",
+  "sourcePath": "C:\\Users\\simor\\Desktop\\imx\\contracts\\interfaces\\IBorrowTracker.sol",
+  "ast": {
+    "absolutePath": "/C/Users/simor/Desktop/imx/contracts/interfaces/IBorrowTracker.sol",
+    "exportedSymbols": {
+      "IBorrowTracker": [
+        2462
+      ]
+    },
+    "id": 2463,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2452,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 2462,
+        "linearizedBaseContracts": [
+          2462
+        ],
+        "name": "IBorrowTracker",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "05285d7f",
+            "id": 2461,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "trackBorrow",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2459,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2454,
+                  "mutability": "mutable",
+                  "name": "borrower",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2461,
+                  "src": "78:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2453,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "78:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2456,
+                  "mutability": "mutable",
+                  "name": "borrowBalance",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2461,
+                  "src": "96:18:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2455,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "96:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2458,
+                  "mutability": "mutable",
+                  "name": "borrowIndex",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2461,
+                  "src": "116:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2457,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "116:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "77:56:8"
+            },
+            "returnParameters": {
+              "id": 2460,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "142:0:8"
+            },
+            "scope": 2462,
+            "src": "57:86:8",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2463,
+        "src": "28:118:8"
+      }
+    ],
+    "src": "0:146:8"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/simor/Desktop/imx/contracts/interfaces/IBorrowTracker.sol",
+    "exportedSymbols": {
+      "IBorrowTracker": [
+        2462
+      ]
+    },
+    "id": 2463,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2452,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 2462,
+        "linearizedBaseContracts": [
+          2462
+        ],
+        "name": "IBorrowTracker",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "05285d7f",
+            "id": 2461,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "trackBorrow",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2459,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2454,
+                  "mutability": "mutable",
+                  "name": "borrower",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2461,
+                  "src": "78:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2453,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "78:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2456,
+                  "mutability": "mutable",
+                  "name": "borrowBalance",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2461,
+                  "src": "96:18:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2455,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "96:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2458,
+                  "mutability": "mutable",
+                  "name": "borrowIndex",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2461,
+                  "src": "116:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2457,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "116:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "77:56:8"
+            },
+            "returnParameters": {
+              "id": 2460,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "142:0:8"
+            },
+            "scope": 2462,
+            "src": "57:86:8",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2463,
+        "src": "28:118:8"
+      }
+    ],
+    "src": "0:146:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.6+commit.6c089d02.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.2",
+  "updatedAt": "2021-03-09T19:15:19.106Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
