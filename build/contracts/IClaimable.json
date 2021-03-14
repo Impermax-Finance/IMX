@@ -27,14 +27,14 @@
     "absolutePath": "/C/Users/simor/Desktop/imx/contracts/interfaces/IClaimable.sol",
     "exportedSymbols": {
       "IClaimable": [
-        2470
+        2495
       ]
     },
-    "id": 2471,
+    "id": 2496,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2464,
+        "id": 2489,
         "literals": [
           "solidity",
           "=",
@@ -51,9 +51,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2470,
+        "id": 2495,
         "linearizedBaseContracts": [
-          2470
+          2495
         ],
         "name": "IClaimable",
         "nodeType": "ContractDefinition",
@@ -62,7 +62,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "4e71d92d",
-            "id": 2469,
+            "id": 2494,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -70,23 +70,23 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2465,
+              "id": 2490,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "66:2:9"
             },
             "returnParameters": {
-              "id": 2468,
+              "id": 2493,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2467,
+                  "id": 2492,
                   "mutability": "mutable",
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2469,
+                  "scope": 2494,
                   "src": "87:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -95,7 +95,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2466,
+                    "id": 2491,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "87:4:9",
@@ -110,14 +110,14 @@
               ],
               "src": "86:13:9"
             },
-            "scope": 2470,
+            "scope": 2495,
             "src": "52:48:9",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 2471,
+        "scope": 2496,
         "src": "27:76:9"
       }
     ],
@@ -127,14 +127,14 @@
     "absolutePath": "/C/Users/simor/Desktop/imx/contracts/interfaces/IClaimable.sol",
     "exportedSymbols": {
       "IClaimable": [
-        2470
+        2495
       ]
     },
-    "id": 2471,
+    "id": 2496,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2464,
+        "id": 2489,
         "literals": [
           "solidity",
           "=",
@@ -151,9 +151,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2470,
+        "id": 2495,
         "linearizedBaseContracts": [
-          2470
+          2495
         ],
         "name": "IClaimable",
         "nodeType": "ContractDefinition",
@@ -162,7 +162,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "4e71d92d",
-            "id": 2469,
+            "id": 2494,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -170,23 +170,23 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2465,
+              "id": 2490,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "66:2:9"
             },
             "returnParameters": {
-              "id": 2468,
+              "id": 2493,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2467,
+                  "id": 2492,
                   "mutability": "mutable",
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2469,
+                  "scope": 2494,
                   "src": "87:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -195,7 +195,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2466,
+                    "id": 2491,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "87:4:9",
@@ -210,14 +210,14 @@
               ],
               "src": "86:13:9"
             },
-            "scope": 2470,
+            "scope": 2495,
             "src": "52:48:9",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 2471,
+        "scope": 2496,
         "src": "27:76:9"
       }
     ],
@@ -229,7 +229,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.2",
-  "updatedAt": "2021-03-09T19:15:19.107Z",
+  "updatedAt": "2021-03-14T20:48:45.404Z",
   "devdoc": {
     "methods": {}
   },

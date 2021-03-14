@@ -60,7 +60,8 @@ contract VesterSale is IVester, IClaimable {
 		} else {
 			uint currentPoint = vestingCurve( (blockTimestamp - vestingBegin).mul(1e18).div(vestingEnd - vestingBegin) );
 			amount = vestingAmount.mul(currentPoint - previousPoint).div(finalPoint).mul(8).div(10);
-			if (previousPoint == 0 && currentPoint == 0) {
+			if (previousPoint == 0 && currentPoint > 0) {
+				// distribute 20% on TGE
 				amount = amount.add(vestingAmount.div(5));
 			}
 			previousPoint = currentPoint;

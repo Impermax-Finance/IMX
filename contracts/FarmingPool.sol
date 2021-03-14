@@ -67,9 +67,13 @@ contract FarmingPool is IBorrowTracker, Distributor {
 		return super.claim();
 	}
 	
+	function claimAccount(address account) public returns (uint amount) {
+		advance();
+		return claimInternal(account);
+	}
+	
 	function trackBorrow(address borrower, uint borrowBalance, uint borrowIndex) public override {
 		require(msg.sender == borrowable, "FarmingPool: UNAUTHORIZED");
-		//if (borrowBalance == 0 && recipients[borrower].shares == 0) return; // inutile!
 		uint newShares = borrowBalance.mul(2**96).div(borrowIndex);
 		editRecipientInternal(borrower, newShares);
 	}

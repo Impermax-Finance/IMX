@@ -37,14 +37,14 @@
     "absolutePath": "/C/Users/simor/Desktop/imx/contracts/interfaces/IBorrowTracker.sol",
     "exportedSymbols": {
       "IBorrowTracker": [
-        2462
+        2487
       ]
     },
-    "id": 2463,
+    "id": 2488,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2452,
+        "id": 2477,
         "literals": [
           "solidity",
           ">=",
@@ -61,9 +61,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2462,
+        "id": 2487,
         "linearizedBaseContracts": [
-          2462
+          2487
         ],
         "name": "IBorrowTracker",
         "nodeType": "ContractDefinition",
@@ -72,7 +72,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "05285d7f",
-            "id": 2461,
+            "id": 2486,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -80,17 +80,17 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2459,
+              "id": 2484,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2454,
+                  "id": 2479,
                   "mutability": "mutable",
                   "name": "borrower",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2461,
+                  "scope": 2486,
                   "src": "78:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -99,7 +99,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2453,
+                    "id": 2478,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "78:7:8",
@@ -114,12 +114,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2456,
+                  "id": 2481,
                   "mutability": "mutable",
                   "name": "borrowBalance",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2461,
+                  "scope": 2486,
                   "src": "96:18:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -128,7 +128,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2455,
+                    "id": 2480,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "96:4:8",
@@ -142,12 +142,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2458,
+                  "id": 2483,
                   "mutability": "mutable",
                   "name": "borrowIndex",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2461,
+                  "scope": 2486,
                   "src": "116:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -156,7 +156,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2457,
+                    "id": 2482,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "116:4:8",
@@ -172,19 +172,19 @@
               "src": "77:56:8"
             },
             "returnParameters": {
-              "id": 2460,
+              "id": 2485,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "142:0:8"
             },
-            "scope": 2462,
+            "scope": 2487,
             "src": "57:86:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 2463,
+        "scope": 2488,
         "src": "28:118:8"
       }
     ],
@@ -194,14 +194,14 @@
     "absolutePath": "/C/Users/simor/Desktop/imx/contracts/interfaces/IBorrowTracker.sol",
     "exportedSymbols": {
       "IBorrowTracker": [
-        2462
+        2487
       ]
     },
-    "id": 2463,
+    "id": 2488,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2452,
+        "id": 2477,
         "literals": [
           "solidity",
           ">=",
@@ -218,9 +218,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2462,
+        "id": 2487,
         "linearizedBaseContracts": [
-          2462
+          2487
         ],
         "name": "IBorrowTracker",
         "nodeType": "ContractDefinition",
@@ -229,7 +229,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "05285d7f",
-            "id": 2461,
+            "id": 2486,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -237,17 +237,17 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2459,
+              "id": 2484,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2454,
+                  "id": 2479,
                   "mutability": "mutable",
                   "name": "borrower",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2461,
+                  "scope": 2486,
                   "src": "78:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -256,7 +256,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2453,
+                    "id": 2478,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "78:7:8",
@@ -271,12 +271,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2456,
+                  "id": 2481,
                   "mutability": "mutable",
                   "name": "borrowBalance",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2461,
+                  "scope": 2486,
                   "src": "96:18:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -285,7 +285,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2455,
+                    "id": 2480,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "96:4:8",
@@ -299,12 +299,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2458,
+                  "id": 2483,
                   "mutability": "mutable",
                   "name": "borrowIndex",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2461,
+                  "scope": 2486,
                   "src": "116:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -313,7 +313,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2457,
+                    "id": 2482,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "116:4:8",
@@ -329,19 +329,19 @@
               "src": "77:56:8"
             },
             "returnParameters": {
-              "id": 2460,
+              "id": 2485,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "142:0:8"
             },
-            "scope": 2462,
+            "scope": 2487,
             "src": "57:86:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 2463,
+        "scope": 2488,
         "src": "28:118:8"
       }
     ],
@@ -353,7 +353,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.2",
-  "updatedAt": "2021-03-09T19:15:19.106Z",
+  "updatedAt": "2021-03-14T20:48:45.403Z",
   "devdoc": {
     "methods": {}
   },

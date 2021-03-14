@@ -49,7 +49,8 @@ contract('VesterSale', function (accounts) {
 	});
 	
 	[
-		{T: 0, expectedPercentage: 0.20},
+		{T: 0, expectedPercentage: 0},
+		{T: 1, expectedPercentage: 0.20},
 		{T: 1262280, expectedPercentage: 0.22106},
 		{T: 20 * 24 * 3600, expectedPercentage: 0.22863},
 		{T: 200 * 24 * 3600, expectedPercentage: 0.44815},

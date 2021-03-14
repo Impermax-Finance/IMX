@@ -45,12 +45,16 @@ abstract contract Distributor is IClaimable {
 		recipient.credit = credit;
 	}
 
-	function claim() public virtual override returns (uint credit) {
-		credit = updateCredit(msg.sender);
+	function claimInternal(address account) internal returns (uint credit) {
+		credit = updateCredit(account);
 		if (credit > 0) {
-			recipients[msg.sender].credit = 0;
-			IImx(imx).transfer(msg.sender, credit);
+			recipients[account].credit = 0;
+			IImx(imx).transfer(account, credit);
 		}
+	}
+
+	function claim() public virtual override returns (uint credit) {
+		return claimInternal(msg.sender);
 	}
 	
 	function editRecipientInternal(address account, uint shares) internal {

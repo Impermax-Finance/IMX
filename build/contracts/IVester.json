@@ -66,14 +66,14 @@
     "absolutePath": "/C/Users/simor/Desktop/imx/contracts/interfaces/IVester.sol",
     "exportedSymbols": {
       "IVester": [
-        2512
+        2537
       ]
     },
-    "id": 2513,
+    "id": 2538,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2491,
+        "id": 2516,
         "literals": [
           "solidity",
           ">=",
@@ -90,9 +90,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2512,
+        "id": 2537,
         "linearizedBaseContracts": [
-          2512
+          2537
         ],
         "name": "IVester",
         "nodeType": "ContractDefinition",
@@ -101,7 +101,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "e2d6870a",
-            "id": 2496,
+            "id": 2521,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -109,23 +109,23 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2492,
+              "id": 2517,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "67:2:11"
             },
             "returnParameters": {
-              "id": 2495,
+              "id": 2520,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2494,
+                  "id": 2519,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2496,
+                  "scope": 2521,
                   "src": "93:4:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -134,7 +134,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2493,
+                    "id": 2518,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "93:4:11",
@@ -149,7 +149,7 @@
               ],
               "src": "92:6:11"
             },
-            "scope": 2512,
+            "scope": 2537,
             "src": "50:49:11",
             "stateMutability": "pure",
             "virtual": false,
@@ -159,7 +159,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "00728f76",
-            "id": 2501,
+            "id": 2526,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -167,23 +167,23 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2497,
+              "id": 2522,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "124:2:11"
             },
             "returnParameters": {
-              "id": 2500,
+              "id": 2525,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2499,
+                  "id": 2524,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2501,
+                  "scope": 2526,
                   "src": "150:4:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -192,7 +192,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2498,
+                    "id": 2523,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "150:4:11",
@@ -207,7 +207,7 @@
               ],
               "src": "149:6:11"
             },
-            "scope": 2512,
+            "scope": 2537,
             "src": "102:54:11",
             "stateMutability": "pure",
             "virtual": false,
@@ -217,7 +217,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "e29bc68b",
-            "id": 2506,
+            "id": 2531,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -225,23 +225,23 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2502,
+              "id": 2527,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "180:2:11"
             },
             "returnParameters": {
-              "id": 2505,
+              "id": 2530,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2504,
+                  "id": 2529,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2506,
+                  "scope": 2531,
                   "src": "206:4:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -250,7 +250,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2503,
+                    "id": 2528,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "206:4:11",
@@ -265,7 +265,7 @@
               ],
               "src": "205:6:11"
             },
-            "scope": 2512,
+            "scope": 2537,
             "src": "159:53:11",
             "stateMutability": "pure",
             "virtual": false,
@@ -275,7 +275,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "84a1931f",
-            "id": 2511,
+            "id": 2536,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -283,23 +283,23 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2507,
+              "id": 2532,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "234:2:11"
             },
             "returnParameters": {
-              "id": 2510,
+              "id": 2535,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2509,
+                  "id": 2534,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2511,
+                  "scope": 2536,
                   "src": "260:4:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -308,7 +308,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2508,
+                    "id": 2533,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "260:4:11",
@@ -323,14 +323,14 @@
               ],
               "src": "259:6:11"
             },
-            "scope": 2512,
+            "scope": 2537,
             "src": "215:51:11",
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 2513,
+        "scope": 2538,
         "src": "28:241:11"
       }
     ],
@@ -340,14 +340,14 @@
     "absolutePath": "/C/Users/simor/Desktop/imx/contracts/interfaces/IVester.sol",
     "exportedSymbols": {
       "IVester": [
-        2512
+        2537
       ]
     },
-    "id": 2513,
+    "id": 2538,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2491,
+        "id": 2516,
         "literals": [
           "solidity",
           ">=",
@@ -364,9 +364,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2512,
+        "id": 2537,
         "linearizedBaseContracts": [
-          2512
+          2537
         ],
         "name": "IVester",
         "nodeType": "ContractDefinition",
@@ -375,7 +375,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "e2d6870a",
-            "id": 2496,
+            "id": 2521,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -383,23 +383,23 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2492,
+              "id": 2517,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "67:2:11"
             },
             "returnParameters": {
-              "id": 2495,
+              "id": 2520,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2494,
+                  "id": 2519,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2496,
+                  "scope": 2521,
                   "src": "93:4:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -408,7 +408,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2493,
+                    "id": 2518,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "93:4:11",
@@ -423,7 +423,7 @@
               ],
               "src": "92:6:11"
             },
-            "scope": 2512,
+            "scope": 2537,
             "src": "50:49:11",
             "stateMutability": "pure",
             "virtual": false,
@@ -433,7 +433,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "00728f76",
-            "id": 2501,
+            "id": 2526,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -441,23 +441,23 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2497,
+              "id": 2522,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "124:2:11"
             },
             "returnParameters": {
-              "id": 2500,
+              "id": 2525,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2499,
+                  "id": 2524,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2501,
+                  "scope": 2526,
                   "src": "150:4:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -466,7 +466,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2498,
+                    "id": 2523,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "150:4:11",
@@ -481,7 +481,7 @@
               ],
               "src": "149:6:11"
             },
-            "scope": 2512,
+            "scope": 2537,
             "src": "102:54:11",
             "stateMutability": "pure",
             "virtual": false,
@@ -491,7 +491,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "e29bc68b",
-            "id": 2506,
+            "id": 2531,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -499,23 +499,23 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2502,
+              "id": 2527,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "180:2:11"
             },
             "returnParameters": {
-              "id": 2505,
+              "id": 2530,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2504,
+                  "id": 2529,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2506,
+                  "scope": 2531,
                   "src": "206:4:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -524,7 +524,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2503,
+                    "id": 2528,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "206:4:11",
@@ -539,7 +539,7 @@
               ],
               "src": "205:6:11"
             },
-            "scope": 2512,
+            "scope": 2537,
             "src": "159:53:11",
             "stateMutability": "pure",
             "virtual": false,
@@ -549,7 +549,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "84a1931f",
-            "id": 2511,
+            "id": 2536,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -557,23 +557,23 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2507,
+              "id": 2532,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "234:2:11"
             },
             "returnParameters": {
-              "id": 2510,
+              "id": 2535,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2509,
+                  "id": 2534,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 2511,
+                  "scope": 2536,
                   "src": "260:4:11",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -582,7 +582,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2508,
+                    "id": 2533,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "260:4:11",
@@ -597,14 +597,14 @@
               ],
               "src": "259:6:11"
             },
-            "scope": 2512,
+            "scope": 2537,
             "src": "215:51:11",
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 2513,
+        "scope": 2538,
         "src": "28:241:11"
       }
     ],
@@ -616,7 +616,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.2",
-  "updatedAt": "2021-03-09T19:15:19.109Z",
+  "updatedAt": "2021-03-14T20:48:45.405Z",
   "devdoc": {
     "methods": {}
   },
