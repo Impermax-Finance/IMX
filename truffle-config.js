@@ -14,7 +14,15 @@ module.exports = {
 			},
 			network_id: 3,
 			gas: 4000000      //make sure this gas allocation isn't over 4M, which is the max
-		}
+		},
+		mainnet: {
+			provider: function() {
+				return new HDWalletProvider(process.env.MNEMONIC, "https://mainnet.infura.io/v3/" + process.env.API_KEY)
+			},
+			network_id: 1,
+			gasPrice: 110000000000,
+			gas: 8000000      //make sure this gas allocation isn't over 8M
+		},
 	},
 	compilers: {
 		solc: {
@@ -27,8 +35,10 @@ module.exports = {
 			},
 		},
 	},
-	mocha: {
-		enableTimeouts: false,
-		timeout: 120000, // 2min
+	plugins: [
+		'truffle-plugin-verify'
+	],
+	api_keys: {
+		etherscan: process.env.ETHERSCAN_KEY
 	},
 };

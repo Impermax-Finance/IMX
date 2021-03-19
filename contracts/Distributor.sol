@@ -19,6 +19,11 @@ abstract contract Distributor is IClaimable {
 	
 	uint public totalShares;
 	uint public shareIndex;
+	
+	event UpdateShareIndex(uint shareIndex);
+	event UpdateCredit(address indexed account, uint lastShareIndex, uint credit);
+	event Claim(address indexed account, uint amount);
+	event EditRecipient(address indexed account, uint shares, uint totalShares);
 
 	constructor (
 		address imx_,
@@ -34,6 +39,7 @@ abstract contract Distributor is IClaimable {
 		if (amount == 0) return shareIndex;
 		_shareIndex = amount.mul(2**160).div(totalShares).add(shareIndex);
 		shareIndex = _shareIndex;
+		emit UpdateShareIndex(_shareIndex);
 	}
 	
 	function updateCredit(address account) public returns (uint credit) {
@@ -43,17 +49,19 @@ abstract contract Distributor is IClaimable {
 		credit = recipient.credit + _shareIndex.sub(recipient.lastShareIndex).mul(recipient.shares) / 2**160;
 		recipient.lastShareIndex = _shareIndex;
 		recipient.credit = credit;
+		emit UpdateCredit(account, _shareIndex, credit);
 	}
 
-	function claimInternal(address account) internal returns (uint credit) {
-		credit = updateCredit(account);
-		if (credit > 0) {
+	function claimInternal(address account) internal returns (uint amount) {
+		amount = updateCredit(account);
+		if (amount > 0) {
 			recipients[account].credit = 0;
-			IImx(imx).transfer(account, credit);
+			IImx(imx).transfer(account, amount);
+			emit Claim(account, amount);
 		}
 	}
 
-	function claim() public virtual override returns (uint credit) {
+	function claim() public virtual override returns (uint amount) {
 		return claimInternal(msg.sender);
 	}
 	
@@ -61,9 +69,12 @@ abstract contract Distributor is IClaimable {
 		updateCredit(account);
 		Recipient storage recipient = recipients[account];
 		uint prevShares = recipient.shares;
-		if (prevShares < shares) totalShares = totalShares.add(shares - prevShares);
-		else totalShares = totalShares.sub(prevShares - shares);
+		uint _totalShares = shares > prevShares ? 
+			totalShares.add(shares - prevShares) : 
+			totalShares.sub(prevShares - shares);
+		totalShares = _totalShares;
 		recipient.shares = shares;
+		emit EditRecipient(account, shares, _totalShares);
 	}
 	
 	// Prevents a contract from calling itself, directly or indirectly.

@@ -134,11 +134,18 @@ contract('FarmingPool', function (accounts) {
 			const updateTime = VESTING_BEGIN.add(VESTING_PERIOD.mul(new BN(37)).div(new BN(1000)));
 			const epochBegin = VESTING_BEGIN.add(VESTING_PERIOD.mul(new BN(30)).div(new BN(1000)));
 			await setTimestamp(updateTime);
-			await farmingPool.advance();
+			const receipt = await farmingPool.advance();
 			expectEqual(await farmingPool.epochBegin(), epochBegin);
 			expectEqual(await farmingPool.lastUpdate(), epochBegin);
 			expectAlmostEqualMantissa(await farmingPool.epochAmount(), epochAmount2);
 			expectAlmostEqualMantissa(await farmingPool.shareIndex(), epochAmount1.mul(SHARE_INDEX_MULTIPLIER).div(SHARES_MULTIPLIER));
+			expectEvent(receipt, 'UpdateShareIndex', {
+				shareIndex: await farmingPool.shareIndex(),
+			});
+			expectEvent(receipt, 'Advance', {
+				epochBegin: epochBegin,
+				epochAmount: await farmingPool.epochAmount(),
+			});
 		});
 	
 		it("skipping epochs", async () => {

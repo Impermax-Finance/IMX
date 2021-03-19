@@ -42,8 +42,11 @@ contract('OwnedDistributor', function (accounts) {
 		
 		it("change admin", async () => {
 			await expectRevert(distributor.setAdmin(root, {from: root}), "OwnedDistributor: UNAUTHORIZED");
-			await distributor.setAdmin(root, {from: admin});
+			const receipt = await distributor.setAdmin(root, {from: admin});
 			expect(await distributor.admin()).to.eq(root);
+			expectEvent(receipt, 'SetAdmin', {
+				newAdmin: root
+			});
 			await distributor.setAdmin(admin, {from: root});
 			expect(await distributor.admin()).to.eq(admin);
 		});

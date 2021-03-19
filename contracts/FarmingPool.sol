@@ -20,6 +20,9 @@ contract FarmingPool is IBorrowTracker, Distributor {
 	uint public epochAmount;
 	uint public lastUpdate;
 	
+	event UpdateShareIndex(uint shareIndex);
+	event Advance(uint epochBegin, uint epochAmount);
+	
 	constructor (
 		address imx_,
 		address claimable_,
@@ -46,6 +49,7 @@ contract FarmingPool is IBorrowTracker, Distributor {
 		_shareIndex = amount.mul(2**160).div(totalShares).add(shareIndex);
 		shareIndex = _shareIndex;
 		lastUpdate = timestamp;
+		emit UpdateShareIndex(_shareIndex);
 	}
 	
 	function advance() public nonReentrant {
@@ -60,6 +64,7 @@ contract FarmingPool is IBorrowTracker, Distributor {
 		epochBegin = blockTimestamp - timeSinceBeginning % segmentLength;
 		epochAmount = amount;
 		lastUpdate = epochBegin;
+		emit Advance(epochBegin, epochAmount);
 	}
 	
 	function claim() public override returns (uint amount) {

@@ -59,10 +59,13 @@ contract('Distributor', function (accounts) {
 		it("first shareIndex calculation", async () => {
 			await distributor.setRecipientShares(recipientA, "10");
 			const shareIndex = await distributor.updateShareIndex.call();
-			await distributor.updateShareIndex();
+			const receipt = await distributor.updateShareIndex();
 			expectEqual(shareIndex / 2**160, 100);
 			expectEqual(shareIndex, await distributor.shareIndex());
 			expectEqual(await imx.balanceOf(distributor.address), 1000);
+			expectEvent(receipt, 'UpdateShareIndex', {
+				shareIndex: await distributor.shareIndex(),
+			});
 		});
 		
 		it("second shareIndex calculation", async () => {
@@ -102,11 +105,16 @@ contract('Distributor', function (accounts) {
 		it("if there is only 1 recipient, all tokens will go to him", async () => {
 			await distributor.setRecipientShares(recipientA, "10");
 			let amount = await distributor.updateCredit.call(recipientA);
-			await distributor.updateCredit(recipientA);
+			const receipt = await distributor.updateCredit(recipientA);
 			const r = await distributor.recipients(recipientA);
 			expectEqual(r.lastShareIndex, await distributor.shareIndex());
 			expectEqual(r.credit, 1000);
 			expectEqual(amount, r.credit);
+			expectEvent(receipt, 'UpdateCredit', {
+				account: recipientA,
+				lastShareIndex: await distributor.shareIndex(),
+				credit: '1000',
+			});
 		});
 		
 		it("if there are multiple recipients, tokens will be distributed based on shares", async () => {
@@ -159,13 +167,17 @@ contract('Distributor', function (accounts) {
 		
 		it("if there is only 1 recipient, all tokens will go to him", async () => {
 			await distributor.setRecipientShares(recipientA, "10");
-			await distributor.claim({from: recipientA});
+			const receipt = await distributor.claim({from: recipientA});
 			const shareIndex = await distributor.shareIndex();
 			const r = await distributor.recipients(recipientA);
 			expectEqual(shareIndex / 2**160, 100);
 			expectEqual(r.lastShareIndex, shareIndex);
 			expectEqual(r.credit, 0);
 			expectEqual(await imx.balanceOf(recipientA), 1000);
+			expectEvent(receipt, 'Claim', {
+				account: recipientA,
+				amount: '1000',
+			});
 		});
 		
 		it("if there are multiple recipients, tokens will be distributed based on shares", async () => {
@@ -223,10 +235,15 @@ contract('Distributor', function (accounts) {
 		});	
 		
 		it("increasing a user shares increases totalShare", async () => {
-			await distributor.editRecipientHarness(recipientA, "10");
+			const receipt = await distributor.editRecipientHarness(recipientA, "10");
 			expectEqual(await distributor.totalShares(), 10);
 			const {shares} = await distributor.recipients(recipientA);
 			expectEqual(shares, 10);
+			expectEvent(receipt, 'EditRecipient', {
+				account: recipientA,
+				shares: '10',
+				totalShares: '10',
+			});
 		});
 		
 		it("decreasing a user shares decreases totalShare", async () => {

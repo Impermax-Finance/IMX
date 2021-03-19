@@ -19,15 +19,6 @@ contract Vester is IVester, IClaimable {
 
 	uint public previousPoint;
 	uint public immutable finalPoint;
-	
-	function vestingCurve(uint x) public virtual pure returns (uint y) {
-		uint speed = 1e18;
-		for (uint i = 0; i < 100e16; i += 1e16) {
-			if (x < i + 1e16) return y + speed * (x - i) / 1e16;
-			y += speed;
-			speed = speed * 976 / 1000;
-		}
-	}
 
 	constructor(
 		address imx_,
@@ -45,8 +36,23 @@ contract Vester is IVester, IClaimable {
 		vestingBegin = vestingBegin_;
 		vestingEnd = vestingEnd_;
 
-		previousPoint = 0;
 		finalPoint = vestingCurve(1e18);
+	}
+	
+	function vestingCurve(uint x) public virtual pure returns (uint y) {
+		uint speed = 1e18;
+		for (uint i = 0; i < 100e16; i += 1e16) {
+			if (x < i + 1e16) return y + speed * (x - i) / 1e16;
+			y += speed;
+			speed = speed * 976 / 1000;
+		}
+	}
+	
+	function getUnlockedAmount() internal virtual returns (uint amount) {
+		uint blockTimestamp = getBlockTimestamp();
+		uint currentPoint = vestingCurve( (blockTimestamp - vestingBegin).mul(1e18).div(vestingEnd - vestingBegin) );
+		amount = vestingAmount.mul(currentPoint - previousPoint).div(finalPoint);
+		previousPoint = currentPoint;
 	}
 	
 	function claim() public virtual override returns (uint amount) {
@@ -56,9 +62,7 @@ contract Vester is IVester, IClaimable {
 		if (blockTimestamp > vestingEnd) {
 			amount = IImx(imx).balanceOf(address(this));
 		} else {
-			uint currentPoint = vestingCurve( (blockTimestamp - vestingBegin).mul(1e18).div(vestingEnd - vestingBegin) );
-			amount = vestingAmount.mul(currentPoint - previousPoint).div(finalPoint);
-			previousPoint = currentPoint;
+			amount = getUnlockedAmount();
 		}
 		if (amount > 0) IImx(imx).transfer(recipient, amount);
 	}

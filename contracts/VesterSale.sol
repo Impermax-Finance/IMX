@@ -1,35 +1,8 @@
 pragma solidity =0.6.6;
 
-import "./libraries/SafeMath.sol";
-import "./interfaces/IImx.sol";
-import "./interfaces/IClaimable.sol";
-import "./interfaces/IVester.sol";
+import "./Vester.sol";
 
-// Copied from Vester.sol, but distributes 20% at TGE
-
-contract VesterSale is IVester, IClaimable {
-	using SafeMath for uint;
-
-	uint public constant override segments = 100;
-
-	address public immutable imx;
-	address public recipient;
-
-	uint public immutable override vestingAmount;
-	uint public immutable override vestingBegin;
-	uint public immutable override vestingEnd;
-
-	uint public previousPoint;
-	uint public immutable finalPoint;
-	
-	function vestingCurve(uint x) public virtual pure returns (uint y) {
-		uint speed = 1e18;
-		for (uint i = 0; i < 100e16; i += 1e16) {
-			if (x < i + 1e16) return y + speed * (x - i) / 1e16;
-			y += speed;
-			speed = speed * 976 / 1000;
-		}
-	}
+contract VesterSale is Vester {
 
 	constructor(
 		address imx_,
@@ -37,44 +10,17 @@ contract VesterSale is IVester, IClaimable {
 		uint vestingAmount_,
 		uint vestingBegin_,
 		uint vestingEnd_
-	) public {
-		require(vestingEnd_ > vestingBegin_, "Vester: END_TOO_EARLY");
-
-		imx = imx_;
-		recipient = recipient_;
-
-		vestingAmount = vestingAmount_;
-		vestingBegin = vestingBegin_;
-		vestingEnd = vestingEnd_;
-
-		previousPoint = 0;
-		finalPoint = vestingCurve(1e18);
-	}
+	) public Vester(imx_, recipient_, vestingAmount_, vestingBegin_, vestingEnd_) {}
 	
-	function claim() public virtual override returns (uint amount) {
-		require(msg.sender == recipient, "Vester: UNAUTHORIZED");
+	function getUnlockedAmount() internal virtual override returns (uint amount) {
 		uint blockTimestamp = getBlockTimestamp();
-		if (blockTimestamp < vestingBegin) return 0;
-		if (blockTimestamp > vestingEnd) {
-			amount = IImx(imx).balanceOf(address(this));
-		} else {
-			uint currentPoint = vestingCurve( (blockTimestamp - vestingBegin).mul(1e18).div(vestingEnd - vestingBegin) );
-			amount = vestingAmount.mul(currentPoint - previousPoint).div(finalPoint).mul(8).div(10);
-			if (previousPoint == 0 && currentPoint > 0) {
-				// distribute 20% on TGE
-				amount = amount.add(vestingAmount.div(5));
-			}
-			previousPoint = currentPoint;
+		uint currentPoint = vestingCurve( (blockTimestamp - vestingBegin).mul(1e18).div(vestingEnd - vestingBegin) );
+		amount = vestingAmount.mul(currentPoint - previousPoint).div(finalPoint).mul(8).div(10);
+		if (previousPoint == 0 && currentPoint > 0) {
+			// distribute 20% on TGE
+			amount = amount.add(vestingAmount.div(5));
 		}
-		if (amount > 0) IImx(imx).transfer(recipient, amount);
+		previousPoint = currentPoint;
 	}
-	
-	function setRecipient(address recipient_) public virtual {
-		require(msg.sender == recipient, "Vester: UNAUTHORIZED");
-		recipient = recipient_;
-	}
-	
-	function getBlockTimestamp() public virtual view returns (uint) {
-		return block.timestamp;
-	}
+
 }
