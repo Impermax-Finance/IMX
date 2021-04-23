@@ -19,7 +19,7 @@ contract InitializedDistributor is Distributor {
 		for (uint i = 0; i < data.length; i++) {
 			Shareholder memory shareholder = abi.decode(data[i], (Shareholder));
 			recipients[shareholder.recipient].shares = shareholder.shares;
-			_totalShares += shareholder.shares;
+			_totalShares = _totalShares.add(shareholder.shares);
 		}
 		totalShares = _totalShares;
 	}

@@ -32,7 +32,7 @@ contract FarmingPool is IBorrowTracker, Distributor {
 		borrowable = borrowable_;
 		uint _vestingBegin = IVester(vester_).vestingBegin();
 		vestingBegin = _vestingBegin;
-		segmentLength = (IVester(vester_).vestingEnd() - _vestingBegin) / IVester(vester_).segments();
+		segmentLength = IVester(vester_).vestingEnd().sub(_vestingBegin).div(IVester(vester_).segments());
 	}
 	
 	function updateShareIndex() public virtual override returns (uint _shareIndex) {
@@ -61,23 +61,22 @@ contract FarmingPool is IBorrowTracker, Distributor {
 		if (amount == 0) return;
 		updateShareIndex();		
 		uint timeSinceBeginning = blockTimestamp - vestingBegin;
-		epochBegin = blockTimestamp - timeSinceBeginning % segmentLength;
+		epochBegin = blockTimestamp.sub(timeSinceBeginning.mod(segmentLength));
 		epochAmount = amount;
 		lastUpdate = epochBegin;
 		emit Advance(epochBegin, epochAmount);
 	}
-	
-	function claim() public override returns (uint amount) {
+
+	function claimInternal(address account) internal override returns (uint amount) {
 		advance();
-		return super.claim();
+		return super.claimInternal(account);
 	}
 	
-	function claimAccount(address account) public returns (uint amount) {
-		advance();
+	function claimAccount(address account) external returns (uint amount) {
 		return claimInternal(account);
 	}
 	
-	function trackBorrow(address borrower, uint borrowBalance, uint borrowIndex) public override {
+	function trackBorrow(address borrower, uint borrowBalance, uint borrowIndex) external override {
 		require(msg.sender == borrowable, "FarmingPool: UNAUTHORIZED");
 		uint newShares = borrowBalance.mul(2**96).div(borrowIndex);
 		editRecipientInternal(borrower, newShares);

@@ -52,7 +52,7 @@ abstract contract Distributor is IClaimable {
 		emit UpdateCredit(account, _shareIndex, credit);
 	}
 
-	function claimInternal(address account) internal returns (uint amount) {
+	function claimInternal(address account) internal virtual returns (uint amount) {
 		amount = updateCredit(account);
 		if (amount > 0) {
 			recipients[account].credit = 0;
@@ -61,7 +61,7 @@ abstract contract Distributor is IClaimable {
 		}
 	}
 
-	function claim() public virtual override returns (uint amount) {
+	function claim() external virtual override returns (uint amount) {
 		return claimInternal(msg.sender);
 	}
 	

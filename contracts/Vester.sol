@@ -51,7 +51,7 @@ contract Vester is IVester, IClaimable {
 	function getUnlockedAmount() internal virtual returns (uint amount) {
 		uint blockTimestamp = getBlockTimestamp();
 		uint currentPoint = vestingCurve( (blockTimestamp - vestingBegin).mul(1e18).div(vestingEnd - vestingBegin) );
-		amount = vestingAmount.mul(currentPoint - previousPoint).div(finalPoint);
+		amount = vestingAmount.mul(currentPoint.sub(previousPoint)).div(finalPoint);
 		previousPoint = currentPoint;
 	}
 	
